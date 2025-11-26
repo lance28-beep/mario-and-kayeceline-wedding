@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useMemo, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { siteConfig } from "@/content/site"
-import { Monogram } from "@/components/monogram"
 import StaggeredMenu from "./StaggeredMenu"
 
 const navLinks = [
@@ -92,16 +92,19 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <Link href="#home" className="flex-shrink-0 group relative z-10">
-            <div className="relative">
-              <Monogram
-                aria-label={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
-                color="#D9E5D7"
-                className="w-16 sm:w-20 md:w-24 lg:w-28 group-hover:scale-110 group-active:scale-105 transition-all duration-500 drop-shadow-[0_4px_16px_rgba(217,229,215,0.35)] group-hover:drop-shadow-[0_6px_20px_rgba(217,229,215,0.55)]"
+            <div className="relative flex items-center">
+              <Image
+                src="/monogram/updated monogram.png"
+                alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
+                width={80}
+                height={80}
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto group-hover:scale-105 group-active:scale-100 transition-all duration-500 drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+                priority
               />
             </div>
             
             {/* Subtle background glow on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#A1857A]/0 via-[#E6CFC9]/15 to-[#A1857A]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#E6CFC9]/0 via-[#E6CFC9]/20 to-[#E6CFC9]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg -z-10" />
           </Link>
 
           <div className="hidden md:flex gap-1 items-center">

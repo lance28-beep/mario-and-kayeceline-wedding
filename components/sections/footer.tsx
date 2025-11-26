@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { motion } from "motion/react"
 import { Instagram, Twitter, Facebook, MapPin, Calendar, Clock, Heart, Music2 } from "lucide-react"
 import { siteConfig } from "@/content/site"
-import { Monogram } from "@/components/monogram"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -74,7 +74,6 @@ export function Footer() {
 
   const nav = [
     { label: "Home", href: "#home" },
-    { label: "Our Story", href: "#narrative" },
     { label: "Events", href: "#details" },
     { label: "Gallery", href: "#gallery" },
     { label: "Snap & Share", href: "#snap-share" },
@@ -131,10 +130,13 @@ export function Footer() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative"
         >
-          <Monogram
-            aria-label={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
-            className="w-48 sm:w-60 md:w-72 lg:w-80 xl:w-96 opacity-95"
-            color="#324D3E"
+          <Image
+            src="/monogram/updated monogram.png"
+            alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
+            width={384}
+            height={384}
+            className="w-48 sm:w-60 md:w-72 lg:w-80 xl:w-96 h-auto opacity-95"
+            priority
           />
           {/* Glow effect behind monogram */}
           <div className="absolute inset-0 blur-3xl bg-[#324D3E]/25 -z-10 scale-125" />

@@ -136,7 +136,7 @@ export function Registry() {
         </div>
 
         <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-xs sm:text-sm text-[#324D3E] italic">
+          <p className="text-xs sm:text-sm text-white italic">
             Thank you from the bottom of our hearts.
           </p>
         </div>

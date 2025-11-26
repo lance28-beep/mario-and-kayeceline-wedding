@@ -153,12 +153,12 @@ export function Details() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0d1a13]/95 via-[#0d1a13]/60 to-transparent"></div>
             <div className="absolute inset-0 flex flex-col justify-end px-4 sm:px-6 pb-4 sm:pb-6 text-white">
-              <p className="text-xs sm:text-sm tracking-[0.4em] uppercase opacity-80">
+              {/* <p className="text-xs sm:text-sm tracking-[0.4em] uppercase opacity-80">
                 Orchid Garden Suites Manila
               </p>
               <h3 className="text-2xl sm:text-3xl font-serif font-semibold tracking-wide drop-shadow-lg">
                 {siteConfig.ceremony.venue}
-              </h3>
+              </h3> */}
             </div>
           </div>
 

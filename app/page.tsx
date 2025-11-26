@@ -7,12 +7,10 @@ import { Hero } from "@/components/sections/hero"
 import { Countdown } from "@/components/sections/countdown"
 import { CoupleVideo } from "@/components/sections/couple-video"
 import { WeddingTimeline } from "@/components/sections/wedding-timeline"
-import { Narrative } from "@/components/sections/narrative"
 import { Gallery } from "@/components/sections/gallery"
 import { Messages } from "@/components/sections/messages"
 import { Details } from "@/components/sections/details"
-import { Entourage } from "@/components/sections/entourage"
-import { PrincipalSponsors } from "@/components/sections/principal-sponsors"
+import { EntourageImage } from "@/components/sections/entourage-image"
 import { BookOfGuests } from "@/components/sections/book-of-guests"
 import { Registry } from "@/components/sections/registry"
 import { FAQ } from "@/components/sections/faq"
@@ -42,15 +40,13 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10">
           <Hero />
-          <CoupleVideo />
           <Countdown />
-          <Narrative />
+          <CoupleVideo />
           <Gallery />
           <Messages />
           <Details />
           <WeddingTimeline />
-          <Entourage />
-          <PrincipalSponsors />
+          <EntourageImage />
           <GuestList />
           <BookOfGuests />
           <Registry />

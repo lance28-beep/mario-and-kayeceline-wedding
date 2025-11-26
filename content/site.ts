@@ -19,7 +19,7 @@ export const siteConfig = {
     },
   },
   ceremony: {
-    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
+    location: "620 Pablo Ocampo Street, Malate, Manila",
     venue: "Orchid Garden Suites Manila",
     date: "February 6, 2026",
     day: "Friday",
@@ -28,7 +28,7 @@ export const siteConfig = {
     guestsTime: "12:30 PM",
   },
   reception: {
-    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
+    location: "620 Pablo Ocampo Street, Malate, Manila",
     venue: "Orchid Garden Suites Manila",
     date: "February 6, 2026",
     time: "Reception to follow",

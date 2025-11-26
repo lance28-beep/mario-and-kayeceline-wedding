@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo } from "react"
 import { Heart, Sparkles, Download } from "lucide-react"
 
 const desktopImages = [
-    "/desktop-background/couple (1).jpg",
+    "/desktop-background/couple (13).jpg",
     "/desktop-background/couple (2).jpg",
     "/desktop-background/couple (3).jpg",
     "/desktop-background/couple (4).jpg",
@@ -16,14 +16,14 @@ const desktopImages = [
     "/desktop-background/couple (10).jpg",
     "/desktop-background/couple (11).jpg",
     "/desktop-background/couple (12).jpg",
-    "/desktop-background/couple (13).jpg",
+    "/desktop-background/couple (1).jpg",
     "/desktop-background/couple (14).jpg",
     "/desktop-background/couple (15).jpg",
 
 ]
 
 const mobileImages = [
-    "/mobile-background/couple (1).jpg",
+    "/mobile-background/couple (13).jpg",
     "/mobile-background/couple (2).jpg",
     "/mobile-background/couple (3).jpg",
     "/mobile-background/couple (4).jpg",
@@ -35,7 +35,7 @@ const mobileImages = [
     "/mobile-background/couple (10).jpg",
     "/mobile-background/couple (11).jpg",
     "/mobile-background/couple (12).jpg",
-    "/mobile-background/couple (13).jpg",
+    "/mobile-background/couple (1).jpg",
     "/mobile-background/couple (14).jpg",
     "/mobile-background/couple (15).jpg",
 ]
@@ -147,8 +147,21 @@ export function Hero() {
           }`}
         >
           <div className="relative z-10 flex flex-col items-center text-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+            {/* Bible verse */}
+            <div className="space-y-1 md:space-y-1.5 text-[#FFFFFF] mt-16 sm:mt-0" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
+              <p className="text-[10px] sm:text-sm md:text-base lg:text-lg tracking-[0.14em] md:tracking-[0.18em] lg:tracking-[0.22em]">
+                "We love because
+              </p>
+              <p className="text-[10px] sm:text-sm md:text-base lg:text-lg tracking-[0.14em] md:tracking-[0.18em] lg:tracking-[0.22em]">
+                He first loved us"
+              </p>
+              <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.18em] md:tracking-[0.22em] lg:tracking-[0.26em] mt-0.5">
+                1 John 4:19
+              </p>
+            </div>
+
             {/* Intro copy */}
-            <div className="space-y-0.5 md:space-y-1 text-[#FFFFFF] mt-16 sm:mt-0" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
+            <div className="space-y-0.5 md:space-y-1 text-[#FFFFFF]" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
               <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.1em] md:tracking-[0.15em] lg:tracking-[0.18em] uppercase">
                 WITH THE GRACE OF GOD
               </p>
@@ -247,49 +260,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Ceremony & location */}
-            <div className="text-center space-y-1 md:space-y-1.5 text-[#FFFFFF] uppercase" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
-              <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
-                Ceremony & Reception
-              </p>
-              <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
-                ORCHID GARDEN SUITES MANILA
-              </p>
-              <p className="text-[9px] sm:text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.2em]">
-                620 Pablo Ocampo Street, Malate, Manila
-              </p>
-            </div>
-
-            {/* CTA Buttons & download */}
-            <div className="mt-4 md:mt-6 lg:mt-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
-              <a
-                href="#narrative"
-                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/40 bg-[#324D3E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#324D3E]/90"
-              >
-                <span className="flex items-center justify-center">
-                  Our Story
-                </span>
-              </a>
-              <a
-                href="#guest-list"
-                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/40 bg-[#738A6E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#738A6E]/90"
-              >
-                <span className="flex items-center justify-center">
-                  RSVP
-                </span>
-              </a>
-              <a
-                href="/invitation/image.png"
-                download="Mario-Kaye-Invitation.png"
-                className="group flex-none rounded-full border border-[#E6CFC9]/40 bg-[#BCCFC0] px-3.5 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 text-[11px] md:text-xs lg:text-sm uppercase tracking-[0.15em] md:tracking-[0.18em] lg:tracking-[0.22em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#BCCFC0]/90"
-              >
-                <span className="flex items-center justify-center gap-1.5 md:gap-2">
-                  <Download size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />
-                  <span className="sr-only sm:hidden">Download Invitation</span>
-                  <span className="hidden sm:inline">Download Invitation</span>
-                </span>
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -162,9 +162,7 @@ export function CoupleVideo() {
         A Glimpse of Our Love
         </h2>
         
-        <p className="text-xs sm:text-sm md:text-base text-[#324D3E]/80 font-light max-w-xl mx-auto px-2">
-          Watch the journey that brought us together
-        </p>
+        {/* Subtitle intentionally left blank – main heading and video act as the focal point */}
       </div>
 
       {/* Video Container */}
@@ -310,19 +308,7 @@ export function CoupleVideo() {
           </motion.div>
           
           {/* Simple caption below video */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-center mt-8 sm:mt-10"
-          >
-            <div className="inline-block bg-white/70 px-4 py-2 rounded-full backdrop-blur-sm">
-              <p className="text-xs sm:text-sm md:text-base text-[#324D3E] font-light italic max-w-lg mx-auto px-4">
-                A glimpse into the moments that made our hearts one
-              </p>
-            </div>
-          </motion.div>
+          {/* Caption below video intentionally removed to keep the focus on the video itself */}
         </div>
       </div>
     </Section>

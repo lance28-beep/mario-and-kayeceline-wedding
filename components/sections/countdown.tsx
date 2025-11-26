@@ -1,11 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Section } from "@/components/section"
 import Counter from "@/components/counter"
 import { motion } from "motion/react"
 import { siteConfig } from "@/content/site"
-import { Monogram } from "@/components/monogram"
 
 interface TimeLeft {
   days: number
@@ -210,10 +210,13 @@ export function Countdown() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative"
         >
-          <Monogram
-            aria-label={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
-            className="w-48 sm:w-60 md:w-72 lg:w-80 xl:w-96 opacity-95"
-            color="#324D3E"
+          <Image
+            src="/monogram/updated monogram.png"
+            alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
+            width={384}
+            height={384}
+            className="w-48 sm:w-60 md:w-72 lg:w-80 xl:w-96 h-auto opacity-95"
+            priority
           />
           {/* Glow effect behind monogram */}
           <div className="absolute inset-0 blur-3xl bg-[#8EA58B]/25 -z-10 scale-125" />
