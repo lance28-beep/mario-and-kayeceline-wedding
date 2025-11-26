@@ -59,64 +59,35 @@ export function RSVP({ onSuccess }: RSVPFormProps) {
     <Section id="rsvp" className="relative py-24 md:py-36 overflow-hidden">
       {/* Decorative background elements (transparent section) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-[#BB8A3D]/10 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute top-20 right-20 w-20 h-20 bg-[#CDAC77]/15 rounded-full blur-xl animate-pulse" />
-        <div className="absolute bottom-20 left-20 w-28 h-28 bg-[#BB8A3D]/8 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#CDAC77]/12 rounded-full blur-lg animate-pulse" />
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#BB8A3D]/30 to-transparent" />
-        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#CDAC77]/25 to-transparent" />
-        {/* Corner flowers (same asset, oriented per corner) */}
-        {/* Top-right (base) */}
-        <img
-          src="/decoration/corner_right-top.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 opacity-80 select-none"
-        />
-        {/* Top-left (mirror horizontally) */}
-        <img
-          src="/decoration/corner_right-top.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 opacity-80 select-none transform scale-x-[-1]"
-        />
-        {/* Bottom-left (rotate 180) */}
-        <img
-          src="/decoration/corner_right-top.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute bottom-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 opacity-80 select-none rotate-180"
-        />
-        {/* Bottom-right (rotate 180 + mirror) */}
-        <img
-          src="/decoration/corner_right-top.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute bottom-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 opacity-80 select-none transform rotate-180 scale-x-[-1]"
-        />
+        <div className="absolute top-10 left-10 w-24 h-24 bg-[#8EA58B]/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-20 right-20 w-20 h-20 bg-[#E6CFC9]/15 rounded-full blur-xl animate-pulse" />
+        <div className="absolute bottom-20 left-20 w-28 h-28 bg-[#8EA58B]/8 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#E6CFC9]/12 rounded-full blur-lg animate-pulse" />
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8EA58B]/30 to-transparent" />
+        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E6CFC9]/25 to-transparent" />
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Enhanced Header */}
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-[#FFF6E7] mb-4 md:mb-6 text-balance drop-shadow-lg relative overflow-visible">
-            <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-br from-[#BB8A3D] via-[#CDAC77] to-[#FFF6E7]">RSVP</span>
-            <span className="absolute -inset-x-3 -inset-y-4 text-[#BB8A3D]/25 blur-[28px] -z-10 select-none pointer-events-none">RSVP</span>
+            <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-br from-[#8EA58B] via-[#E6CFC9] to-[#FFF6E7]">RSVP</span>
+            <span className="absolute -inset-x-3 -inset-y-4 text-[#8EA58B]/25 blur-[28px] -z-10 select-none pointer-events-none">RSVP</span>
           </h2>
           {/* Decorative divider under title */}
           <div className="flex items-center justify-center gap-3 md:gap-4 mb-2 md:mb-4">
-            <div className="w-10 sm:w-16 h-px bg-gradient-to-r from-transparent via-[#BB8A3D]/60 to-[#CDAC77]/30" />
-            <div className="w-2 h-2 rounded-full bg-[#BB8A3D]" />
-            <div className="w-10 sm:w-16 h-px bg-gradient-to-l from-transparent via-[#BB8A3D]/60 to-[#CDAC77]/30" />
+            <div className="w-10 sm:w-16 h-px bg-gradient-to-r from-transparent via-[#8EA58B]/60 to-[#E6CFC9]/30" />
+            <div className="w-2 h-2 rounded-full bg-[#8EA58B]" />
+            <div className="w-10 sm:w-16 h-px bg-gradient-to-l from-transparent via-[#8EA58B]/60 to-[#E6CFC9]/30" />
           </div>
 
           {/* Elegant Card */}
           <div className="max-w-3xl mx-auto px-2 sm:px-4">
             <div className="relative">
               {/* Decorative Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#BB8A3D]/10 via-[#CDAC77]/15 to-[#FFF6E7]/5 rounded-2xl blur-xl -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8EA58B]/10 via-[#E6CFC9]/15 to-[#FFF6E7]/5 rounded-2xl blur-xl -z-10"></div>
               
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl p-6 sm:p-10 md:p-12 border border-[#BB8A3D]/30 shadow-2xl">
+              <div className="bg-white/90 backdrop-blur-md rounded-2xl p-6 sm:p-10 md:p-12 border border-[#8EA58B]/30 shadow-2xl">
                 <div className="flex items-center justify-center gap-2 md:gap-3 mb-3 md:mb-4">
   
                   <h3 className="text-xl sm:text-3xl md:text-4xl font-sans font-bold text-[#402921]">
@@ -141,7 +112,7 @@ export function RSVP({ onSuccess }: RSVPFormProps) {
             {/* Form Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-white/90 rounded-3xl blur-sm -z-10"></div>
             
-            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border border-[#BB8A3D]/20">
+            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border border-[#8EA58B]/20">
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-5 sm:space-y-9">
                 {/* Full Name Field */}
                 <div className="space-y-1 sm:space-y-3">

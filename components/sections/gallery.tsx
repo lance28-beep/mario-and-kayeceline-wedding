@@ -1,27 +1,21 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import NextImage from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { Section } from "@/components/section"
 import { motion } from "motion/react"
 // Removed circular gallery in favor of a responsive masonry layout
 
-const galleryHashtag = "#Jules&CrisNuptial"
-
 const galleryItems = [
-  { image: "/mobile-background/couple (1).jpg", text: " " },   
-  { image: "/mobile-background/couple (35).jpeg", text: " " },
-  { image: "/mobile-background/couple (3).jpeg", text: " " },
-  { image: "/mobile-background/couple (6).jpeg", text: " " },
-  { image: "/FrontGallery/couple (1).jpg", text: " " },
-  { image: "/FrontGallery/couple (2).jpg", text: " " },
-  { image: "/FrontGallery/couple (4).jpg", text: " " },
-  { image: "/FrontGallery/couple (8).jpg", text: " " },
-  { image: "/FrontGallery/couple (15).jpg", text: " " },
-  { image: "/FrontGallery/couple (16).jpg", text: " " },
-  { image: "/FrontGallery/couple (18).jpg", text: " " }, 
-  { image: "/FrontGallery/couple (21).jpg", text: " " },
+  { image: "/mobile-background/couple (1).jpg", text: " " }, 
+  { image: "/mobile-background/couple (2).jpg", text: " " },
+  { image: "/mobile-background/couple (3).jpg", text: " " },
+  { image: "/mobile-background/couple (4).jpg", text: " " },
+  { image: "/mobile-background/couple (5).jpg", text: " " },
+  { image: "/mobile-background/couple (6).jpg", text: " " },
+
+  
+
 
 ]
 
@@ -104,75 +98,80 @@ export function Gallery() {
   return (
     <Section
       id="gallery"
-      className="relative bg-gradient-to-b from-[#FFFAEF] via-[#F7E7CE]/90 to-[#FFFAEF] py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="relative bg-[#D9E5D7] py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
     >
       {/* Background elements with motif colors */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Soft gradient overlays with motif colors */}
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#F7E7CE]/30 via-[#FFFAEF]/15 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#B76E79]/20 via-[#FCB8B5]/15 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#A4BB8C]/8 via-transparent to-[#A4BB8C]/8" />
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#E6CFC9]/30 via-[#E6CFC9]/15 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#E6CFC9]/30 via-[#E6CFC9]/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#D9E5D7]/35 via-transparent to-[#D9E5D7]/35" />
 
         {/* Floating decorative circles with motif colors */}
-        <div className="absolute top-6 left-8 w-32 h-32 bg-[#B76E79]/12 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute top-16 right-12 w-24 h-24 bg-[#FCB8B5]/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-20 left-16 w-28 h-28 bg-[#A4BB8C]/12 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-[#F7E7CE]/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: "0.5s" }} />
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#B76E79]/10 rounded-full blur-lg animate-pulse" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute bottom-1/3 right-1/4 w-18 h-18 bg-[#FCB8B5]/12 rounded-full blur-lg animate-pulse" style={{ animationDelay: "0.8s" }} />
+        <div className="absolute top-6 left-8 w-32 h-32 bg-[#E6CFC9]/18 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-16 right-12 w-24 h-24 bg-[#A1857A]/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-20 left-16 w-28 h-28 bg-[#8EA58B]/12 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-10 right-10 w-20 h-20 bg-[#BCCFC0]/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: "0.5s" }} />
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#A1857A]/12 rounded-full blur-lg animate-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute bottom-1/3 right-1/4 w-18 h-18 bg-[#E6CFC9]/14 rounded-full blur-lg animate-pulse" style={{ animationDelay: "0.8s" }} />
 
-        {/* Corner decorations with available flower images */}
+        {/* Top corner decorative elements */}
         <div className="absolute top-0 left-0 z-0 opacity-50">
-          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#B76E79]/20 to-transparent rounded-br-full blur-xl"></div>
+          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#A1857A]/20 to-transparent rounded-br-full blur-xl"></div>
         </div>
         <div className="absolute top-0 right-0 z-0 opacity-50">
           <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-bl from-[#FCB8B5]/20 to-transparent rounded-bl-full blur-xl"></div>
         </div>
-        <div className="absolute bottom-0 left-0 z-0">
-          <NextImage
-            src="/decoration/corner-bottom-left-flower-removebg-preview.png"
-            alt=""
-            width={400}
-            height={400}
-            className="w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 h-auto opacity-60"
-            priority={false}
-          />
-        </div>
-        <div className="absolute bottom-0 right-0 z-0">
-          <NextImage
-            src="/decoration/bottom-corner-left-flower-removebg-preview.png"
-            alt=""
-            width={400}
-            height={400}
-            className="w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 h-auto opacity-60 scale-x-[-1]"
-            priority={false}
-          />
-        </div>
       </div>
+
+      <img
+        src="/decoration/corner-down-left.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 left-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/corner-down-left.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 right-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80 scale-x-[-1]"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/top-right-corner.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute top-0 right-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/top-right-corner.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute top-0 left-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85 scale-x-[-1]"
+        loading="lazy"
+      />
 
       {/* Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-10 md:mb-12 px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#B76E79] mb-3 sm:mb-4 drop-shadow-md">
-          Our Moments
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="w-10 sm:w-14 h-px bg-[#8EA58B]/50" />
+          <div className="w-1.5 h-1.5 bg-[#A1857A]/70 rounded-full" />
+          <div className="w-10 sm:w-14 h-px bg-[#8EA58B]/50" />
+        </div>
+        <h2 className="imperial-script-regular text-3xl sm:text-4xl md:text-5xl text-[#324D3E] mb-2 drop-shadow-md">
+          Moments We Cherish
         </h2>
         
-        <p className="text-xs sm:text-sm md:text-base text-[#B76E79]/80 font-light max-w-xl mx-auto leading-relaxed">
-          Every moment, a treasured memory made eternal
+        <p className="text-xs sm:text-sm md:text-base text-[#4F5F4F]/80 font-light max-w-xl mx-auto leading-relaxed">
+          A glimpse of stories that lead us closer to forever
         </p>
 
-        <div className="mt-4 flex flex-col items-center gap-2">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 text-[#B76E79] text-sm sm:text-base font-semibold shadow-md border border-[#B76E79]/20">
-            {galleryHashtag}
-          </span>
-          <p className="text-[10px] sm:text-xs md:text-sm text-[#B76E79]/70 font-light">
-            Share your snaps with this hashtag to appear in our gallery.
-          </p>
-        </div>
-
         <div className="flex items-center justify-center gap-2 mt-4">
-          <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent via-[#B76E79]/50 to-[#FCB8B5]/40" />
+          <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent via-[#A1857A]/50 to-[#FCB8B5]/40" />
           <motion.div
-            className="w-1.5 h-1.5 rounded-full bg-[#B76E79]/70"
+            className="w-1.5 h-1.5 rounded-full bg-[#A1857A]/70"
             animate={{
               scale: [1, 1.3, 1],
               opacity: [0.7, 1, 0.7],
@@ -183,25 +182,27 @@ export function Gallery() {
               ease: "easeInOut",
             }}
           />
-          <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent via-[#B76E79]/50 to-[#FCB8B5]/40" />
+          <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent via-[#A1857A]/50 to-[#FCB8B5]/40" />
         </div>
       </div>
 
       {/* Gallery content */}
       <div className="relative z-10 w-full">
         <div className="flex justify-center px-4 sm:px-5 md:px-6">
-          <div className="max-w-5xl w-full">
+          <div className="max-w-6xl w-full">
             {isLoading ? (
               <div className="flex items-center justify-center h-48 sm:h-60 md:h-72">
-                <div className="w-10 h-10 border-[3px] border-[#F7E7CE]/40 border-t-[#B76E79] rounded-full animate-spin" />
+                <div className="w-10 h-10 border-[3px] border-[#BCCFC0]/40 border-t-[#A1857A] rounded-full animate-spin" />
               </div>
             ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3.5 md:gap-4.5">
-                {galleryItems.map((item, index) => (
+              <div className="relative rounded-[2rem] border border-white/40 bg-white/75 backdrop-blur-lg shadow-[0_25px_60px_rgba(50,77,62,0.15)] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10">
+                <div className="absolute inset-4 rounded-[1.5rem] border border-[#BCCFC0]/40 pointer-events-none"></div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3.5 md:gap-4.5 relative z-10">
+                  {galleryItems.map((item, index) => (
                   <motion.button
                     key={item.image + index}
                     type="button"
-                    className="group relative w-full overflow-hidden rounded-lg sm:rounded-xl bg-[#F7E7CE]/40 backdrop-blur-sm border border-[#A4BB8C]/30 shadow-lg hover:shadow-xl hover:border-[#B76E79]/50 transition-all duration-300"
+                    className="group relative w-full overflow-hidden rounded-xl bg-[#F6F8F4]/70 backdrop-blur-sm border border-[#8EA58B]/30 shadow-lg hover:shadow-xl hover:border-[#324D3E]/40 transition-all duration-300"
                     onClick={() => {
                       setSelectedImage(item)
                       setCurrentIndex(index)
@@ -213,7 +214,7 @@ export function Gallery() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     {/* Subtle glow on hover with motif colors */}
-                    <div className="absolute -inset-0.5 bg-gradient-to-br from-[#B76E79]/25 to-[#FCB8B5]/15 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute -inset-0.5 bg-gradient-to-br from-[#A1857A]/25 to-[#FCB8B5]/15 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
                     
                     <div className="relative aspect-[3/4] md:aspect-square overflow-hidden">
                       <img
@@ -225,17 +226,12 @@ export function Gallery() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       {/* Gradient overlay on hover with motif colors */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#B76E79]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     
-                    {/* Image counter badge with motif colors */}
-                    <div className="absolute top-2 right-2 bg-[#B76E79]/85 backdrop-blur-sm rounded-full px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/30">
-                      <span className="text-xs font-medium text-white tracking-wide">
-                        {index + 1}/{galleryItems.length}
-                      </span>
-                    </div>
                   </motion.button>
                 ))}
+                </div>
               </div>
             )}
           </div>
@@ -417,10 +413,10 @@ export function Gallery() {
           href="/gallery"
           className="group inline-flex items-center gap-2 px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 rounded-lg sm:rounded-xl font-semibold sm:font-bold transition-all duration-300 uppercase tracking-wider text-xs sm:text-sm md:text-base whitespace-nowrap relative overflow-hidden border-2 backdrop-blur-sm"
           style={{
-            backgroundColor: "#B76E79",
-            borderColor: "rgba(247, 231, 206, 0.8)",
+            backgroundColor: "#324D3E",
+            borderColor: "rgba(188, 207, 192, 0.9)",
             color: "#FFFFFF",
-            boxShadow: "0 4px 20px rgba(183, 110, 121, 0.35), 0 2px 6px rgba(0,0,0,0.25)",
+            boxShadow: "0 4px 20px rgba(50, 77, 62, 0.35), 0 2px 6px rgba(0,0,0,0.25)",
           }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -429,14 +425,14 @@ export function Gallery() {
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(183, 110, 121, 0.95)";
-            e.currentTarget.style.borderColor = "rgba(247, 231, 206, 1)";
-            e.currentTarget.style.boxShadow = "0 8px 30px rgba(183, 110, 121, 0.5), 0 4px 12px rgba(0,0,0,0.3)";
+            e.currentTarget.style.backgroundColor = "rgba(50, 77, 62, 0.95)";
+            e.currentTarget.style.borderColor = "rgba(188, 207, 192, 1)";
+            e.currentTarget.style.boxShadow = "0 8px 30px rgba(50, 77, 62, 0.5), 0 4px 12px rgba(0,0,0,0.3)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "#B76E79";
-            e.currentTarget.style.borderColor = "rgba(247, 231, 206, 0.8)";
-            e.currentTarget.style.boxShadow = "0 4px 20px rgba(183, 110, 121, 0.35), 0 2px 6px rgba(0,0,0,0.25)";
+            e.currentTarget.style.backgroundColor = "#324D3E";
+            e.currentTarget.style.borderColor = "rgba(188, 207, 192, 0.9)";
+            e.currentTarget.style.boxShadow = "0 4px 20px rgba(50, 77, 62, 0.35), 0 2px 6px rgba(0,0,0,0.25)";
           }}
         >
           <span className="relative z-10">View Full Gallery</span>
@@ -453,11 +449,11 @@ export function Gallery() {
             <ChevronRight size={16} className="sm:w-5 sm:h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
           </motion.div>
           <div 
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F7E7CE]/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 transform -skew-x-12 -translate-x-full group-hover:translate-x-full"
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-[#BCCFC0]/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 transform -skew-x-12 -translate-x-full group-hover:translate-x-full"
           />
           {/* Pulsing glow effect */}
           <motion.div 
-            className="absolute inset-0 bg-[#B76E79]/20 rounded-lg sm:rounded-xl blur-xl -z-10"
+            className="absolute inset-0 bg-[#A1857A]/20 rounded-lg sm:rounded-xl blur-xl -z-10"
             animate={{
               opacity: [0.3, 0.6, 0.3],
               scale: [1, 1.1, 1],

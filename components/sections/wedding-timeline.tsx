@@ -12,111 +12,110 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    time: "3:00 PM",
-    title: "Ceremony",
-    Icon: RingsIcon,
-  },
-  {
-    time: "4:30 PM",
-    title: "Postnup Shoot & Cocktail Hour",
+    time: "12:30 PM",
+    title: "Call Time",
     Icon: ClocheIcon,
   },
   {
-    time: "5:30 PM",
-    title: "Wedding Program",
+    time: "1:00 PM",
+    title: "Processional",
+    Icon: RingsIcon,
+  },
+  {
+    time: "1:35 PM",
+    title: "Worship",
     Icon: MicrophoneIcon,
   },
   {
-    time: "6:00 PM",
-    title: "Buffet Dinner",
-    Icon: DinnerIcon,
-  },
-  {
-    time: "7:00 PM",
-    title: "First Dance",
+    time: "1:45 PM",
+    title: "Vows & I Do's",
     Icon: DanceIcon,
   },
   {
-    time: "8:00 PM",
-    title: "Send Off",
+    time: "3:30 PM",
+    title: "Sequence Pictorial",
+    Icon: ClocheIcon,
+  },
+  {
+    time: "4:00 PM",
+    title: "Cocktails & Social Hour",
+    Icon: DinnerIcon,
+  },
+  {
+    time: "5:00 PM",
+    title: "Celebration Dinner",
+    Icon: DinnerIcon,
+  },
+  {
+    time: "6:00 PM",
+    title: "Send-off",
     Icon: FireworksIcon,
   },
 ]
 
 export function WeddingTimeline() {
   return (
-    <Section id="wedding-timeline" className="relative overflow-hidden bg-[#FFFAEF]">
+    <Section id="wedding-timeline" className="relative overflow-hidden bg-[#D9E5D7]">
       {/* Background decorations similar to countdown */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#FFBD87]/20 via-[#FFBD87]/8 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#FFBD87]/20 via-[#FFBD87]/8 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FFFAEF]/40 via-transparent to-[#FFFAEF]/40" />
-        <div className="absolute top-12 left-12 w-32 h-32 bg-[#FFBD87]/20 rounded-full blur-2xl opacity-80 animate-pulse" />
-        <div className="absolute top-20 right-20 w-24 h-24 bg-[#FFBD87]/15 rounded-full blur-xl opacity-70 animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-20 left-24 w-28 h-28 bg-[#FFBD87]/20 rounded-full blur-2xl opacity-70 animate-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-24 right-16 w-24 h-24 bg-[#FFBD87]/15 rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDelay: "0.5s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FFFAEF]/30 rounded-full blur-3xl opacity-70 animate-pulse" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute bottom-0 left-0 z-0">
-          <Image
-            src="/decoration/corner-bottom-left-flower-removebg-preview.png"
-            alt="Bottom left decoration"
-            width={600}
-            height={600}
-            className="w-40 h-auto sm:w-56 md:w-72 lg:w-80 opacity-80"
-            priority={false}
-          />
-        </div>
-        <div className="absolute bottom-0 right-0 z-0 scale-x-[-1]">
-          <Image
-            src="/decoration/corner-bottom-left-flower-removebg-preview.png"
-            alt="Bottom right decoration"
-            width={600}
-            height={600}
-            className="w-40 h-auto sm:w-56 md:w-72 lg:w-80 opacity-80"
-            priority={false}
-          />
-        </div>
-        <div className="absolute top-0 left-0 z-0 scale-y-[-1]">
-          <Image
-            src="/decoration/corner-bottom-left-flower-removebg-preview.png"
-            alt="Top left decoration"
-            width={600}
-            height={600}
-            className="w-36 h-auto sm:w-48 md:w-64 opacity-70"
-            priority={false}
-          />
-        </div>
-        <div className="absolute top-0 right-0 z-0 scale-x-[-1] scale-y-[-1]">
-          <Image
-            src="/decoration/corner-bottom-left-flower-removebg-preview.png"
-            alt="Top right decoration"
-            width={600}
-            height={600}
-            className="w-36 h-auto sm:w-48 md:w-64 opacity-70"
-            priority={false}
-          />
-        </div>
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#E6CFC9]/20 via-[#E6CFC9]/8 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#E6CFC9]/20 via-[#E6CFC9]/8 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#D9E5D7]/40 via-transparent to-[#D9E5D7]/40" />
+        <div className="absolute top-12 left-12 w-32 h-32 bg-[#E6CFC9]/20 rounded-full blur-2xl opacity-80 animate-pulse" />
+        <div className="absolute top-20 right-20 w-24 h-24 bg-[#E6CFC9]/15 rounded-full blur-xl opacity-70 animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-20 left-24 w-28 h-28 bg-[#E6CFC9]/20 rounded-full blur-2xl opacity-70 animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-24 right-16 w-24 h-24 bg-[#E6CFC9]/15 rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDelay: "0.5s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#D9E5D7]/30 rounded-full blur-3xl opacity-70 animate-pulse" style={{ animationDelay: "1.5s" }} />
       </div>
+
+      <img
+        src="/decoration/corner-down-left.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 left-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/corner-down-left.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 right-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80 scale-x-[-1]"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/top-right-corner.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute top-0 right-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85"
+        loading="lazy"
+      />
+      <img
+        src="/decoration/top-right-corner.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute top-0 left-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85 scale-x-[-1]"
+        loading="lazy"
+      />
 
       <div className="relative z-10 text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
         <div className="flex items-center justify-center gap-2 mb-2 sm:mb-3">
-          <div className="w-12 sm:w-16 h-px bg-[#CFAE9C]/50" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#CFAE9C]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#E7C9B1]" />
-          <div className="w-12 sm:w-16 h-px bg-[#CFAE9C]/50" />
+          <div className="w-12 sm:w-16 h-px bg-[#324D3E]/50" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#324D3E]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#324D3E]/70" />
+          <div className="w-12 sm:w-16 h-px bg-[#324D3E]/50" />
         </div>
-        <h2 className="imperial-script-regular text-3xl sm:text-4xl md:text-5xl text-[#9C6B63]">
+        <h2 className="imperial-script-regular text-3xl sm:text-4xl md:text-5xl text-[#324D3E]">
           Wedding Timeline
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-[#9C6B63]/80 font-light mt-2 max-w-md mx-auto">
+        <p className="text-xs sm:text-sm md:text-base text-[#324D3E]/80 font-light mt-2 max-w-md mx-auto">
           A glimpse of the moments we'll share
         </p>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto py-6 sm:py-8 md:py-10">
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#E7C9B1] via-[#CFAE9C] to-[#E7C9B1] -translate-x-1/2 pointer-events-none">
-          <div className="absolute top-0 w-1 h-1 rounded-full bg-[#CFAE9C]" />
-          <div className="absolute bottom-0 w-1 h-1 rounded-full bg-[#CFAE9C]" />
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#324D3E]/40 via-[#324D3E] to-[#324D3E]/40 -translate-x-1/2 pointer-events-none">
+          <div className="absolute top-0 w-1 h-1 rounded-full bg-[#324D3E]" />
+          <div className="absolute bottom-0 w-1 h-1 rounded-full bg-[#324D3E]" />
         </div>
 
         <div className="space-y-10 sm:space-y-12 md:space-y-14">
@@ -126,10 +125,10 @@ export function WeddingTimeline() {
               className="relative flex flex-col items-center text-center gap-3 px-6 sm:px-10 w-full max-w-sm mx-auto"
             >
               <IconBadge Icon={event.Icon} />
-              <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#CFAE9C] uppercase">
+              <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#324D3E] uppercase">
                 {event.time}
               </p>
-              <p className="text-base sm:text-lg md:text-xl font-playfair text-[#7A4B42] uppercase tracking-[0.1em]">
+              <p className="text-base sm:text-lg md:text-xl font-playfair text-[#324D3E] uppercase tracking-[0.1em]">
                 {event.title}
               </p>
             </div>
@@ -142,7 +141,7 @@ export function WeddingTimeline() {
 
 function IconBadge({ Icon }: { Icon: () => JSX.Element }) {
   return (
-    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#CFAE9C] bg-white flex items-center justify-center shadow-[0_6px_18px_rgba(207,174,156,0.3)]">
+    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#324D3E] bg-white flex items-center justify-center shadow-[0_6px_18px_rgba(50,77,62,0.3)]">
       <Icon />
     </div>
   )
@@ -150,7 +149,7 @@ function IconBadge({ Icon }: { Icon: () => JSX.Element }) {
 
 function RingsIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#CFAE9C]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <circle cx="13" cy="19" r="7" />
       <circle cx="21" cy="13" r="7" />
     </svg>
@@ -159,7 +158,7 @@ function RingsIcon() {
 
 function ClocheIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#D8908F]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M5 23h22" />
       <path d="M8 23a8 8 0 1 1 16 0" />
       <path d="M16 11v-2" />
@@ -170,7 +169,7 @@ function ClocheIcon() {
 
 function MicrophoneIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#B28FA6]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <rect x="12" y="3" width="8" height="14" rx="4" />
       <path d="M10 12v3a6 6 0 0 0 12 0v-3" />
       <path d="M16 19v6" />
@@ -181,7 +180,7 @@ function MicrophoneIcon() {
 
 function DinnerIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#A4B5A6]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M5 23h22" />
       <path d="M8 23a8 8 0 0 1 16 0" />
       <path d="M12 12V5" />
@@ -193,7 +192,7 @@ function DinnerIcon() {
 
 function DanceIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#D6A4A4]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M16 9c3-4 9-4 9 2 0 4-5 8-9 10-4-2-9-6-9-10 0-6 6-6 9-2z" />
     </svg>
   )
@@ -201,7 +200,7 @@ function DanceIcon() {
 
 function FireworksIcon() {
   return (
-    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#D89F7A]" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 text-[#324D3E]" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M16 5v6" />
       <path d="M9 7l3 5" />
       <path d="M23 7l-3 5" />

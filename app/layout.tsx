@@ -10,25 +10,25 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "-
 const imperialScript = Imperial_Script({ subsets: ["latin"], weight: "400", variable: "--font-imperial-script" })
 
 export const metadata: Metadata = {
-  title: "Julaine & Cristopher - Wedding Invitation",
+  title: "Mario & Kaye Celine Wedding | February 06, 2026 | Orchid Garden Suites Manila",
   description:
-    "Celebrate the wedding of Julaine and Cristopher on December 28, 2025 at Mount Costa, Lamtang Road, Pugis, La Trinidad, Benguet. RSVP, explore their love story, view the gallery, and send your wishes.",
+    "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
   keywords:
-    "Julaine Cristopher wedding, La Trinidad Benguet wedding, Mount Costa, garden wedding, spring theme wedding, RSVP, wedding gallery, message wall, love story, #JulaineAndCristopherWedding",
+    "Mario and Kaye Celine wedding, February 06 2026 wedding, Orchid Garden Suites Manila wedding, Manila wedding, wedding invitation website",
   authors: [
-    { name: "Julaine" },
-    { name: "Cristopher" },
+    { name: "Mario" },
+    { name: "Kaye Celine" },
   ],
-  creator: "Julaine & Cristopher",
-  publisher: "Julaine & Cristopher",
+  creator: "Mario and Kaye Celine",
+  publisher: "Mario and Kaye Celine",
   formatDetection: {
     email: false,
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://Julaine-and-Cristopher-invitation.vercel.app/"),
+  metadataBase: new URL("https://mario-and-kayeceline-wedding.vercel.app/"),
   alternates: {
-    canonical: "https://Julaine-and-Cristopher-invitation.vercel.app/",
+    canonical: "https://mario-and-kayeceline-wedding.vercel.app/",
   },
   icons: {
     icon: [
@@ -50,29 +50,29 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Julaine & Cristopher Wedding | December 28, 2025",
+    title: "Mario & Kaye Celine Wedding | February 06, 2026",
     description:
-      "Celebrate the union of Julaine & Cristopher on December 28, 2025 at Mount Costa, Lamtang Road, Pugis, La Trinidad, Benguet. Discover their love story, RSVP, view the gallery, and share your wishes!",
-    url: "https://Julaine-and-Cristopher-invitation.vercel.app/",
-    siteName: "Julaine and Cristopher Wedding",
+      "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
+    url: "https://mario-and-kayeceline-wedding.vercel.app/",
+    siteName: "Mario and Kaye Celine Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://Julaine-and-Cristopher-invitation.vercel.app/desktop-background/couple (1).jpeg",
+        url: "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
         width: 1200,
         height: 630,
-        alt: "Julaine & Cristopher Wedding Invitation - December 28, 2025",
+        alt: "Mario & Kaye Celine Wedding Invitation - February 06, 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Julaine & Cristopher Wedding Invitation",
+    title: "Mario & Kaye Celine Wedding | February 06, 2026",
     description:
-      "You're invited to the wedding of Julaine & Cristopher on December 28, 2025. RSVP, explore the gallery, and leave a message! #JulaineAndCristopherWedding",
-    images: ["https://Julaine-and-Cristopher-invitation.vercel.app/desktop-background/couple (1).jpeg"],
-    creator: "@julaineandcristopher",
+      "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
+    images: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
+    creator: "@marioandkayeceline",
   },
   robots: {
     index: true,
@@ -92,39 +92,40 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
-      name: "Julaine & Cristopher Wedding",
-      startDate: "2025-12-28T15:00:00+08:00",
-      endDate: "2025-12-28T22:00:00+08:00",
+      name: "Mario & Kaye Celine Wedding",
+      startDate: "2026-02-06T13:00:00+08:00",
+      endDate: "2026-02-06T22:00:00+08:00",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: [
         {
           "@type": "Place",
-          name: "Mount Costa",
+          name: "Orchid Garden Suites Manila",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Lamtang Road, Pugis",
-            addressLocality: "La Trinidad, Benguet",
+            streetAddress: "620 Pablo Ocampo Street",
+            addressLocality: "Malate, Manila",
             addressCountry: "PH",
           },
         },
       ],
-      image: ["https://Julaine-and-Cristopher-invitation.vercel.app/desktop-background/couple (1).jpeg"],
+      image: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
       description:
-        "You're invited to the wedding of Julaine & Cristopher on December 28, 2025 at Mount Costa, La Trinidad, Benguet. RSVP, read their love story, view the gallery, and leave a message for the couple.",
+        "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
       organizer: {
         "@type": "Person",
-        name: "Julaine & Cristopher",
+        name: "Mario & Kaye Celine",
       },
       offers: {
         "@type": "Offer",
-        url: "https://Julaine-and-Cristopher-invitation.vercel.app/",
+        url: "https://mario-and-kayeceline-wedding.vercel.app/",
         availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "PHP",
       },
-      eventHashtag: "#JulaineAndCristopherWedding",
+      eventHashtag: "#MarioAndKayeCelineWedding",
     }),
+    "image": "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
   },
 }
 
@@ -136,11 +137,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#B76E79" />
+        <meta name="theme-color" content="#8EA58B" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet" />
         <link rel="preload" as="image" href="/mobile-background/DSCF2614-min.jpg" media="(max-width: 767px)" />
         <link rel="preload" as="image" href="/desktop-background/DSCF2444-min.jpg" media="(min-width: 768px)" />
       </head>

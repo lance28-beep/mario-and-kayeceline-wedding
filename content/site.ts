@@ -1,63 +1,63 @@
 export const siteConfig = {
   couple: {
-    bride: "Julaine",
-    brideNickname: "Julaine",
-    groom: "Cristopher",
-    groomNickname: "Cristopher",
+    bride: "Kaye Celine",
+    brideNickname: "Kaye Celine",
+    groom: "Mario",
+    groomNickname: "Mario",
   },
   wedding: {
-    date: "December 28, 2025",
-    time: "3:00 PM, PH Time",
-    venue: "Mount Costa Lamtang Road, Pugis La Trinidad, Benguet",
-    tagline: "are getting married!",
-    theme: "Spring Theme, Water Paint flowers (Garden wedding)",
-    motif: "Spring Theme, Water Paint flowers (Garden wedding)",
+    date: "February 6, 2026",
+    time: "1:00 PM",
+    venue: "Orchid Garden Suites Manila",
+    tagline: "joyfully request the honor of your presence to celebrate their union in love",
+    theme: "Elegant Green Wedding",
+    motif: "Elegant Green Wedding",
   },
   details: {
     rsvp: {
-      deadline: "December 21, 2025",
+      deadline: "January 6, 2026",
     },
   },
   ceremony: {
-    location: "Mount Costa Lamtang Road, Pugis La Trinidad, Benguet",
-    venue: "Mount Costa",
-    date: "December 28, 2025",
-    day: "Sunday",
-    time: "3:00 PM, PH Time",
-    entourageTime: "2:00 PM",
-    guestsTime: "2:30 PM",
+    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
+    venue: "Orchid Garden Suites Manila",
+    date: "February 6, 2026",
+    day: "Friday",
+    time: "1:00 PM",
+    entourageTime: "12:00 PM",
+    guestsTime: "12:30 PM",
   },
   reception: {
-    location: "Mount Costa Lamtang Road, Pugis La Trinidad, Benguet",
-    venue: "Mount Costa",
-    date: "December 28, 2025",
+    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
+    venue: "Orchid Garden Suites Manila",
+    date: "February 6, 2026",
     time: "Reception to follow",
   },
   dressCode: {
-    theme: "Spring Theme, Water Paint flowers (Garden wedding)",
-    colors: ["#B76E79", "#F7E7CE", "#FFFFFF"],
+    theme: "Elegant Green Wedding",
+    colors: ["#8EA58B", "#A1857A", "#BCCFC0", "#E6CFC9", "#D9E5D7"],
     sponsors: {
-      ladies: "Modern Filipiniana",
-      gentlemen: "Barong"
+      ladies: "Emerald Green Gown",
+      gentlemen: "Grey Barong and Black Slacks"
     },
     guests: {
-      ladies: "Long Gown/ cocktail dresses",
-      gentlemen: "Long Sleeves /Polo and Black slacks."
+      ladies: "Formal Dress",
+      gentlemen: "Formal Long Sleeves and Slacks"
     },
-    note: "Please come in your best formal/semi-formal ensemble"
+    note: "We would love to see you in formal attire. Please dress according to our wedding color palette. Strictly no jeans and no shorts."
   },
-  narrative: `Our story began in 2016, when a quiet admiration led him to reach me through his friend in the Rotaract Club,a simple gesture that laid the first brick of something meaningful.  Over the course of a year of patient and sincere courtship, we chose each other despite our opposite personalities and the challenges of a long-distance relationship, we discovered a love that didn't happen by chance but was built with intention, step by step, layer by layer.
+  narrative: `We’re incredibly excited to share with you the beautiful journey of how our love began — a story filled with small moments that grew into something truly meaningful. From the very first spark to the countless memories that followed, every chapter has shaped who we are today. We want this space to be a little window into our hearts, a place where you can feel the warmth, laughter, and magic that brought us together.
 
-What began as a simple hello eventually turned into a journey of trust, growth, and steadfast devotion. A relationship tested by load, strengthened by trials, and grounded in faith, proving that the best structures are those built on solid foundations. Along the way, we learned that God wasn't just guiding our hearts. He was overseeing every detail like the ultimate Project Manager. He taught us patience in the waiting, strength in the distance, and grace in every season.
+Right now, we’re still putting the pieces together, choosing the words that best capture everything we’ve been through — the challenges we conquered, the joy we found in each other, and the love that continues to grow every single day. Hehehe, medyo kinikilig pa kami habang sinusulat!
 
-In the grand blueprint of our story, this isn't the final chapter. This is the moment when the foundation is complete, the plans are approved, and we finally get to build the life we've only imagined. And if there's one thing we know for sure, it's that with God leading the project, this love is designed not just to stand but to last.`,
+Please stay tuned as we craft our full story. We can’t wait to share it with you soon. Something sweet, real, and beautiful is on its way. 💕✨`,
   colors: {
-    primary: "#B76E79",
-    secondary: "#F7E7CE",
+    primary: "#8EA58B",
+    secondary: "#A1857A",
   },
   snapShare: {
-    googleDriveLink: "https://drive.google.com/drive/folders/1NXkwt_JCCXVdHgVZpB9n2uKRWVen9hZL?usp=sharing",
-    instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
+    googleDriveLink: "https://drive.google.com/drive/folders/1qX5QzqMvbp_0kk5qQ7WR_aSo3LvNvqtW?usp=sharing",
+    instructions: "Help us capture our special day! Use our hashtag: #JUNfoundTheKAYEtoForever",
   },
 }
 

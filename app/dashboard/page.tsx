@@ -129,7 +129,7 @@ export default function DashboardPage() {
   })
 
   // Password - you can change this!
-  const DASHBOARD_PASSWORD = "282025" // Change this to your preferred password
+  const DASHBOARD_PASSWORD = "062026" // Change this to your preferred password
 
   // Check if already authenticated
   useEffect(() => {
@@ -871,26 +871,28 @@ export default function DashboardPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-[#F5F0ED] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[#D9E5D7] flex items-center justify-center p-4">
         <div className="w-full max-w-md">
-          <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#C2D3C3]/30">
+          <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#738A6E]/30">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-[#C2D3C3] rounded-full mb-3">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-[#738A6E] rounded-full mb-3">
                 <Lock className="h-10 w-10 text-white" />
               </div>
-              <div className="text-xs tracking-[0.2em] uppercase font-semibold text-[#B28383] mb-2">welcome Julaine & Cristopher
+              <div className="text-xs tracking-[0.2em] uppercase font-semibold text-[#324D3E] mb-2">welcome Mario
+and
+Kaye Celine
 </div>
-              <h1 className="text-3xl font-serif font-bold text-[#A78256] mb-2">
+              <h1 className="text-3xl font-serif font-bold text-[#324D3E] mb-2">
                 Wedding Dashboard
               </h1>
-              <p className="text-[#A78256]/70 font-sans">
+              <p className="text-[#324D3E]/70 font-sans">
                 Enter password to access
               </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+                <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                   Password
                 </label>
                 <input
@@ -898,21 +900,21 @@ export default function DashboardPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter dashboard password"
-                  className="w-full px-4 py-3 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                  className="w-full px-4 py-3 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                   autoFocus
                 />
               </div>
 
               {error && (
-                <div className="bg-[#B28383]/20 border-2 border-[#B28383]/40 rounded-xl p-3 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#B28383]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{error}</span>
+                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
               <Button
                 type="submit"
-                className="w-full bg-[#C2D3C3] hover:bg-[#B28383] text-white py-3 rounded-xl font-semibold transition-colors"
+                className="w-full bg-[#738A6E] hover:bg-[#324D3E] text-white py-3 rounded-xl font-semibold transition-colors"
               >
                 Access Dashboard
               </Button>
@@ -924,9 +926,9 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F0ED]">
+    <div className="min-h-screen bg-[#D9E5D7]">
       {/* Header */}
-      <div className="bg-[#C2D3C3] shadow-lg">
+      <div className="bg-[#738A6E] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
@@ -966,73 +968,73 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30">
             <div className="flex items-center justify-between mb-2">
-              <Users className="h-6 w-6 sm:h-8 sm:w-8 text-[#C2D3C3]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#A78256]">{stats.totalGuests}</span>
+              <Users className="h-6 w-6 sm:h-8 sm:w-8 text-[#738A6E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.totalGuests}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Total Guests</p>
-            <p className="text-xs text-[#A78256]/50 font-sans mt-1">{stats.total} entries</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Total Guests</p>
+            <p className="text-xs text-[#324D3E]/50 font-sans mt-1">{stats.total} entries</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30">
             <div className="flex items-center justify-between mb-2">
-              <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#C2D3C3]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#C2D3C3]">{stats.attending}</span>
+              <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#738A6E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#738A6E]">{stats.attending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Attending</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Attending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#B28383]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
             <div className="flex items-center justify-between mb-2">
-              <XCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#B28383]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#B28383]">{stats.notAttending}</span>
+              <XCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.notAttending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Not Attending</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Not Attending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#B28383]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
             <div className="flex items-center justify-between mb-2">
-              <AlertCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#B28383]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#B28383]">{stats.pending}</span>
+              <AlertCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.pending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Pending</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Pending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#B28383]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
             <div className="flex items-center justify-between mb-2">
-              <Bell className="h-6 w-6 sm:h-8 sm:w-8 text-[#B28383]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#B28383]">{guestRequests.length}</span>
+              <Bell className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{guestRequests.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Requests</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Requests</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#A78256]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
             <div className="flex items-center justify-between mb-2">
-              <Crown className="h-6 w-6 sm:h-8 sm:w-8 text-[#A78256]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#A78256]">{entourage.length}</span>
+              <Crown className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{entourage.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Entourage</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Entourage</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#A78256]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
             <div className="flex items-center justify-between mb-2">
-              <UserPlus className="h-6 w-6 sm:h-8 sm:w-8 text-[#A78256]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#A78256]">{principalSponsors.length}</span>
+              <UserPlus className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{principalSponsors.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#A78256]/70 font-sans">Principal Sponsors</p>
+            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Principal Sponsors</p>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-2xl p-1 sm:p-2 shadow-md border border-[#C2D3C3]/30 mb-6">
+        <div className="bg-white rounded-2xl p-1 sm:p-2 shadow-md border border-[#738A6E]/30 mb-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2">
             <button
               onClick={() => setActiveTab("guests")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "guests"
-                  ? "bg-[#C2D3C3] text-white shadow-lg"
-                  : "text-[#A78256] hover:bg-[#C2D3C3]/20"
+                  ? "bg-[#738A6E] text-white shadow-lg"
+                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
               }`}
             >
               <Users className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1042,14 +1044,14 @@ export default function DashboardPage() {
               onClick={() => setActiveTab("requests")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 relative ${
                 activeTab === "requests"
-                  ? "bg-[#C2D3C3] text-white shadow-lg"
-                  : "text-[#A78256] hover:bg-[#C2D3C3]/20"
+                  ? "bg-[#738A6E] text-white shadow-lg"
+                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
               }`}
             >
               <Bell className="h-4 w-4 sm:h-5 sm:w-5" />
               Guest Requests
               {guestRequests.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#B28383] text-white text-[10px] sm:text-xs font-bold rounded-full min-w-[18px] h-4 sm:min-w-[20px] sm:h-5 px-1 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#324D3E] text-white text-[10px] sm:text-xs font-bold rounded-full min-w-[18px] h-4 sm:min-w-[20px] sm:h-5 px-1 flex items-center justify-center">
                   {guestRequests.length > 99 ? '99+' : guestRequests.length}
                 </span>
               )}
@@ -1058,8 +1060,8 @@ export default function DashboardPage() {
               onClick={() => setActiveTab("entourage")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "entourage"
-                  ? "bg-[#C2D3C3] text-white shadow-lg"
-                  : "text-[#A78256] hover:bg-[#C2D3C3]/20"
+                  ? "bg-[#738A6E] text-white shadow-lg"
+                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
               }`}
             >
               <Crown className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1069,8 +1071,8 @@ export default function DashboardPage() {
               onClick={() => setActiveTab("principalsponsor")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "principalsponsor"
-                  ? "bg-[#C2D3C3] text-white shadow-lg"
-                  : "text-[#A78256] hover:bg-[#C2D3C3]/20"
+                  ? "bg-[#738A6E] text-white shadow-lg"
+                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
               }`}
             >
               <UserPlus className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1083,17 +1085,17 @@ export default function DashboardPage() {
         {activeTab === "guests" && (
           <>
         {/* Search and Add Guest */}
-        <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30 mb-6">
+        <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
             <div className="flex-1 w-full">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#A78256]/40" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search guests by name or email..."
-                  className="w-full pl-10 pr-4 py-2 border-2 border-[#C2D3C3]/30 focus:border-[#C2D3C3] rounded-xl font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10 bg-white"
+                  className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/30 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10 bg-white"
                 />
               </div>
             </div>
@@ -1104,7 +1106,7 @@ export default function DashboardPage() {
                 setEditModalOpen(false)
                 setFormData({ Name: "", Email: "", RSVP: "", Guest: "", Message: "" })
               }}
-              className="bg-[#C2D3C3] hover:bg-[#B28383] text-white transition-colors"
+              className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Guest
@@ -1113,44 +1115,44 @@ export default function DashboardPage() {
 
           {/* Success/Error Messages */}
           {successMessage && (
-            <div className="bg-[#C2D3C3]/20 border-2 border-[#C2D3C3]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[#C2D3C3]" />
-              <span className="text-[#A78256] font-semibold text-sm">{successMessage}</span>
+            <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-[#738A6E]" />
+              <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
             </div>
           )}
 
           {error && (
-            <div className="bg-[#B28383]/20 border-2 border-[#B28383]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-              <AlertCircle className="h-5 w-5 text-[#B28383]" />
-              <span className="text-[#A78256] font-semibold text-sm">{error}</span>
+            <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+              <AlertCircle className="h-5 w-5 text-[#324D3E]" />
+              <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
             </div>
           )}
 
         </div>
 
         {/* Guest List */}
-        <div className="bg-white rounded-2xl shadow-md border border-[#C2D3C3]/30 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-[#F5F0ED]">
+              <thead className="bg-[#D9E5D7]">
                 <tr>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Name</th>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Email</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans">RSVP</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans whitespace-nowrap">
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">RSVP</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans whitespace-nowrap">
                     <span className="flex items-center justify-center gap-1">
                       <Users className="h-4 w-4" />
                       Guests
                     </span>
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Message</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Actions</th>
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Message</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#C2D3C3]/20">
+              <tbody className="divide-y divide-[#738A6E]/20">
                 {filteredGuests.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="px-6 py-12 text-center text-[#A78256]/60 font-sans">
+                    <td colSpan={6} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
                       {isLoading ? (
                         <div className="flex items-center justify-center gap-2">
                           <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1163,26 +1165,26 @@ export default function DashboardPage() {
                   </tr>
                 ) : (
                   filteredGuests.map((guest, index) => (
-                    <tr key={index} className="hover:bg-[#C2D3C3]/15 transition-colors bg-white">
-                      <td className="px-6 py-4 font-medium text-[#A78256] font-sans">{guest.Name}</td>
-                      <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                    <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
+                      <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{guest.Name}</td>
+                      <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                         {guest.Email && guest.Email !== "Pending" ? guest.Email : "-"}
                       </td>
                       <td className="px-6 py-4 text-center">
                         {guest.RSVP === "Yes" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#C2D3C3]/30 text-[#A78256] rounded-full text-sm font-semibold border border-[#C2D3C3]/40">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#738A6E]/30 text-[#324D3E] rounded-full text-sm font-semibold border border-[#738A6E]/40">
                             <CheckCircle className="h-4 w-4" />
                             Attending
                           </span>
                         )}
                         {guest.RSVP === "No" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#B28383]/30 text-[#A78256] rounded-full text-sm font-semibold border border-[#B28383]/40">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#324D3E]/30 text-[#324D3E] rounded-full text-sm font-semibold border border-[#324D3E]/40">
                             <XCircle className="h-4 w-4" />
                             Not Attending
                           </span>
                         )}
                         {guest.RSVP === "Maybe" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#EDD6AC]/60 text-[#A78256] rounded-full text-sm font-semibold border border-[#EDD6AC]/70">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#8EA58B]/60 text-[#324D3E] rounded-full text-sm font-semibold border border-[#8EA58B]/70">
                             <AlertCircle className="h-4 w-4" />
                             Maybe
                           </span>
@@ -1194,20 +1196,20 @@ export default function DashboardPage() {
                         ) : null}
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#C2D3C3]/30 text-[#A78256] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#C2D3C3]/40">
+                        <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#738A6E]/30 text-[#324D3E] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#738A6E]/40">
                           {guest?.Guest !== undefined && guest?.Guest !== null && guest?.Guest !== '' 
                             ? (parseInt(String(guest.Guest)) || 1) 
                             : 1}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-[#A78256]/70 font-sans max-w-xs truncate" title={guest.Message || ""}>
+                      <td className="px-6 py-4 text-[#324D3E]/70 font-sans max-w-xs truncate" title={guest.Message || ""}>
                         {guest.Message || "-"}
                       </td>
                       <td className="px-6 py-4 text-center">
                         <div className="flex items-center justify-center gap-2">
                           <button
                             onClick={() => handleEditClick(guest)}
-                            className="p-2 text-[#C2D3C3] hover:bg-[#C2D3C3]/20 rounded-lg transition-colors"
+                            className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
                             title="Edit guest"
                           >
                             <Edit2 className="h-4 w-4" />
@@ -1240,17 +1242,17 @@ export default function DashboardPage() {
         {activeTab === "requests" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#A78256]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
                     <input
                       type="text"
                       value={searchRequestQuery}
                       onChange={(e) => setSearchRequestQuery(e.target.value)}
                       placeholder="Search requests by name or email..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
                     />
                   </div>
                 </div>
@@ -1258,44 +1260,44 @@ export default function DashboardPage() {
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#C2D3C3]/20 border-2 border-[#C2D3C3]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#C2D3C3]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#B28383]/20 border-2 border-[#B28383]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#B28383]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{error}</span>
+                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
             </div>
 
             {/* Requests List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#C2D3C3]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#F5F0ED]">
+                  <thead className="bg-[#D9E5D7]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Name</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Email</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Phone</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans whitespace-nowrap">
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Phone</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans whitespace-nowrap">
                         <span className="flex items-center justify-center gap-1">
                           <Users className="h-4 w-4" />
                           Guests
                         </span>
                       </th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Message</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Message</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#C2D3C3]/20">
+                  <tbody className="divide-y divide-[#738A6E]/20">
                     {filteredRequests.length === 0 ? (
                       <tr>
-                        <td colSpan={6} className="px-6 py-12 text-center text-[#A78256]/60 font-sans">
+                        <td colSpan={6} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1308,29 +1310,29 @@ export default function DashboardPage() {
                       </tr>
                     ) : (
                       filteredRequests.map((request, index) => (
-                        <tr key={index} className="hover:bg-[#C2D3C3]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#A78256] font-sans">{request.Name}</td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{request.Name}</td>
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {request.Email && request.Email !== "Pending" ? request.Email : "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {request.Phone || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
-                            <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#C2D3C3]/20 text-[#C2D3C3] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#C2D3C3]/30">
+                            <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#738A6E]/20 text-[#738A6E] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#738A6E]/30">
                               {request?.Guest !== undefined && request?.Guest !== null && request?.Guest !== '' 
                                 ? (parseInt(String(request.Guest)) || 1) 
                                 : 1}
                             </span>
                           </td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans max-w-xs truncate">
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans max-w-xs truncate">
                             {request.Message || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleAddRequestToGuestListClick(request)}
-                                className="px-4 py-2 bg-[#C2D3C3] hover:bg-[#B28383] text-white rounded-lg transition-colors font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg"
+                                className="px-4 py-2 bg-[#738A6E] hover:bg-[#324D3E] text-white rounded-lg transition-colors font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg"
                                 title="Add to guest list"
                               >
                                 <UserCheck className="h-4 w-4" />
@@ -1364,17 +1366,17 @@ export default function DashboardPage() {
         {activeTab === "entourage" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#A78256]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
                     <input
                       type="text"
                       value={searchEntourageQuery}
                       onChange={(e) => setSearchEntourageQuery(e.target.value)}
                       placeholder="Search entourage by name, role, or email..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
                     />
                   </div>
                 </div>
@@ -1385,7 +1387,7 @@ export default function DashboardPage() {
                     setEntourageFormData({ Name: "", RoleCategory: "", RoleTitle: "", Email: "" })
                     setShowEntourageModal(true)
                   }}
-                className="bg-[#C2D3C3] hover:bg-[#B28383] text-white transition-colors"
+                className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Member
@@ -1394,16 +1396,16 @@ export default function DashboardPage() {
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#C2D3C3]/20 border-2 border-[#C2D3C3]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#C2D3C3]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#B28383]/20 border-2 border-[#B28383]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#B28383]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{error}</span>
+                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
@@ -1411,22 +1413,22 @@ export default function DashboardPage() {
             </div>
 
             {/* Entourage List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#C2D3C3]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#F5F0ED]">
+                  <thead className="bg-[#D9E5D7]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Name</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Role Category</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Role Title</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Email</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Role Category</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Role Title</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#C2D3C3]/20">
+                  <tbody className="divide-y divide-[#738A6E]/20">
                     {filteredEntourage.length === 0 ? (
                       <tr>
-                        <td colSpan={5} className="px-6 py-12 text-center text-[#A78256]/60 font-sans">
+                        <td colSpan={5} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1439,22 +1441,22 @@ export default function DashboardPage() {
                       </tr>
                     ) : (
                       filteredEntourage.map((member, index) => (
-                        <tr key={index} className="hover:bg-[#C2D3C3]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#A78256] font-sans">{member.Name}</td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{member.Name}</td>
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {member.RoleCategory || "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {member.RoleTitle || "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {member.Email && member.Email !== "Pending" ? member.Email : "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleEditEntourageClick(member)}
-                                className="p-2 text-[#C2D3C3] hover:bg-[#C2D3C3]/20 rounded-lg transition-colors"
+                                className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
                                 title="Edit member"
                               >
                                 <Edit2 className="h-4 w-4" />
@@ -1487,17 +1489,17 @@ export default function DashboardPage() {
         {activeTab === "principalsponsor" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#C2D3C3]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#A78256]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
                     <input
                       type="text"
                       value={searchPrincipalSponsorQuery}
                       onChange={(e) => setSearchPrincipalSponsorQuery(e.target.value)}
                       placeholder="Search by name..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
                     />
                   </div>
                 </div>
@@ -1507,7 +1509,7 @@ export default function DashboardPage() {
                     setPrincipalSponsorFormData({ MalePrincipalSponsor: "", FemalePrincipalSponsor: "" })
                     setShowPrincipalSponsorModal(true)
                   }}
-                className="bg-[#C2D3C3] hover:bg-[#B28383] text-white transition-colors"
+                className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Sponsors
@@ -1516,36 +1518,36 @@ export default function DashboardPage() {
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#C2D3C3]/20 border-2 border-[#C2D3C3]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#C2D3C3]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#B28383]/20 border-2 border-[#B28383]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#B28383]" />
-                  <span className="text-[#A78256] font-semibold text-sm">{error}</span>
+                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
+                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
             </div>
 
             {/* PrincipalSponsor List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#C2D3C3]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#F5F0ED]">
+                  <thead className="bg-[#D9E5D7]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Male Principal Sponsor</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Female Principal Sponsor</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#A78256] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Male Principal Sponsor</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Female Principal Sponsor</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#C2D3C3]/20">
+                  <tbody className="divide-y divide-[#738A6E]/20">
                     {filteredPrincipalSponsors.length === 0 ? (
                       <tr>
-                        <td colSpan={3} className="px-6 py-12 text-center text-[#A78256]/60 font-sans">
+                        <td colSpan={3} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1558,16 +1560,16 @@ export default function DashboardPage() {
                       </tr>
                     ) : (
                       filteredPrincipalSponsors.map((sponsor, index) => (
-                        <tr key={index} className="hover:bg-[#C2D3C3]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#A78256] font-sans">{sponsor.MalePrincipalSponsor}</td>
-                          <td className="px-6 py-4 text-[#A78256]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{sponsor.MalePrincipalSponsor}</td>
+                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
                             {sponsor.FemalePrincipalSponsor || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleEditPrincipalSponsorClick(sponsor)}
-                                className="p-2 text-[#C2D3C3] hover:bg-[#C2D3C3]/20 rounded-lg transition-colors"
+                                className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
                                 title="Edit sponsors"
                               >
                                 <Edit2 className="h-4 w-4" />
@@ -1693,13 +1695,13 @@ function AddToGuestListModal({
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30">
-        <div className="sticky top-0 bg-[#F5F0ED] px-6 py-4 border-b border-[#C2D3C3]/20 rounded-t-2xl">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30">
+        <div className="sticky top-0 bg-[#D9E5D7] px-6 py-4 border-b border-[#738A6E]/20 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#A78256] font-sans">Add to Guest List</h3>
+            <h3 className="text-xl font-bold text-[#324D3E] font-sans">Add to Guest List</h3>
             <button
               onClick={onCancel}
-              className="p-2 hover:bg-[#C2D3C3]/20 rounded-lg transition-colors text-[#A78256]/70 hover:text-[#A78256]"
+              className="p-2 hover:bg-[#738A6E]/20 rounded-lg transition-colors text-[#324D3E]/70 hover:text-[#324D3E]"
             >
               <XCircle className="h-5 w-5" />
             </button>
@@ -1707,21 +1709,21 @@ function AddToGuestListModal({
         </div>
         <div className="p-6">
           <div className="mb-6">
-            <p className="text-base text-[#A78256] font-sans leading-relaxed">
+            <p className="text-base text-[#324D3E] font-sans leading-relaxed">
               <span className="font-bold text-lg">{request.Name}</span> is requesting to join your wedding with a total of{' '}
-              <span className="font-bold text-lg text-[#C2D3C3]">{guestCount}</span>{' '}
+              <span className="font-bold text-lg text-[#738A6E]">{guestCount}</span>{' '}
               {guestCount === 1 ? 'guest' : 'guests'}.
             </p>
           </div>
           
-          <div className="bg-[#F5F0ED] rounded-xl p-4 mb-6 border border-[#C2D3C3]/30">
-            <p className="text-sm font-semibold text-[#A78256] mb-2 font-sans">Request Details:</p>
-            <div className="space-y-2 text-sm text-[#A78256]/80 font-sans">
+          <div className="bg-[#D9E5D7] rounded-xl p-4 mb-6 border border-[#738A6E]/30">
+            <p className="text-sm font-semibold text-[#324D3E] mb-2 font-sans">Request Details:</p>
+            <div className="space-y-2 text-sm text-[#324D3E]/80 font-sans">
               <div><span className="font-medium">Email:</span> {request.Email || "-"}</div>
               {request.Phone && <div><span className="font-medium">Phone:</span> {request.Phone}</div>}
               <div><span className="font-medium">Guests:</span> {guestCount}</div>
               {request.Message && (
-                <div className="mt-2 pt-2 border-t border-[#C2D3C3]/20">
+                <div className="mt-2 pt-2 border-t border-[#738A6E]/20">
                   <span className="font-medium">Message:</span>
                   <p className="italic mt-1">{request.Message}</p>
                 </div>
@@ -1729,7 +1731,7 @@ function AddToGuestListModal({
             </div>
           </div>
 
-          <p className="text-sm text-[#A78256]/70 mb-6 font-sans">
+          <p className="text-sm text-[#324D3E]/70 mb-6 font-sans">
             Do you want to include this to guest list?
           </p>
 
@@ -1737,7 +1739,7 @@ function AddToGuestListModal({
             <Button
               onClick={onConfirm}
               disabled={isLoading}
-              className="flex-1 bg-[#C2D3C3] hover:bg-[#B28383] text-white disabled:opacity-50 transition-colors"
+              className="flex-1 bg-[#738A6E] hover:bg-[#324D3E] text-white disabled:opacity-50 transition-colors"
             >
               {isLoading ? (
                 <>
@@ -1830,13 +1832,13 @@ function EntourageModal({
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30 max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-[#F5F0ED] px-6 py-4 border-b border-[#C2D3C3]/30 rounded-t-2xl">
+      <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30 max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-[#D9E5D7] px-6 py-4 border-b border-[#738A6E]/30 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#A78256] font-sans">{editing ? 'Edit Entourage Member' : 'Add New Entourage Member'}</h3>
+            <h3 className="text-xl font-bold text-[#324D3E] font-sans">{editing ? 'Edit Entourage Member' : 'Add New Entourage Member'}</h3>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-[#C2D3C3]/20 rounded-lg transition-colors text-[#A78256]/70 hover:text-[#A78256]"
+              className="p-2 hover:bg-[#738A6E]/20 rounded-lg transition-colors text-[#324D3E]/70 hover:text-[#324D3E]"
             >
               <XCircle className="h-5 w-5" />
             </button>
@@ -1845,17 +1847,17 @@ function EntourageModal({
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">Name *</label>
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">Name *</label>
               <input
                 type="text"
                 value={formData.Name}
                 onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Role Category
                 {currentRoleCategoryCount > 0 && (
                   <span className="text-xs text-gray-500 font-normal ml-2">({currentRoleCategoryCount} existing)</span>
@@ -1868,7 +1870,7 @@ function EntourageModal({
                   value={formData.RoleCategory}
                   onChange={(e) => setFormData({ ...formData, RoleCategory: e.target.value, RoleTitle: "" })}
                   placeholder="e.g., Wedding Party, Family"
-                  className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                  className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 />
                 <datalist id="role-category-options">
                   {uniqueRoleCategories.map((category, index) => (
@@ -1878,7 +1880,7 @@ function EntourageModal({
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Role Title
                 {currentRoleTitleCount > 0 && (
                   <span className="text-xs text-gray-500 font-normal ml-2">({currentRoleTitleCount} existing)</span>
@@ -1891,7 +1893,7 @@ function EntourageModal({
                   value={formData.RoleTitle}
                   onChange={(e) => setFormData({ ...formData, RoleTitle: e.target.value })}
                   placeholder="e.g., Best Man, Maid of Honor"
-                  className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                  className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 />
                 {formData.RoleCategory && uniqueRoleTitles.length > 0 && (
                   <datalist id="role-title-options">
@@ -1903,13 +1905,13 @@ function EntourageModal({
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">Email</label>
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">Email</label>
               <input
                 type="email"
                 value={formData.Email}
                 onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
                 placeholder="email@example.com"
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
               />
             </div>
           </div>
@@ -1917,7 +1919,7 @@ function EntourageModal({
             <Button
               onClick={onSave}
               disabled={isLoading}
-              className="flex-1 bg-[#C2D3C3] hover:bg-[#B28383] text-white transition-colors"
+              className="flex-1 bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
             >
               {isLoading ? (
                 <>
@@ -1960,15 +1962,15 @@ function PrincipalSponsorModal({
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30 max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-[#F5F0ED] px-6 py-4 border-b border-[#C2D3C3]/30 rounded-t-2xl">
+      <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30 max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-[#D9E5D7] px-6 py-4 border-b border-[#738A6E]/30 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#A78256] font-sans">
+            <h3 className="text-xl font-bold text-[#324D3E] font-sans">
               {editing ? "Edit Principal Sponsors" : "Add New Principal Sponsors"}
             </h3>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-[#C2D3C3]/20 rounded-lg transition-colors text-[#A78256]/70 hover:text-[#A78256]"
+              className="p-2 hover:bg-[#738A6E]/20 rounded-lg transition-colors text-[#324D3E]/70 hover:text-[#324D3E]"
             >
               <XCircle className="h-5 w-5" />
             </button>
@@ -1977,28 +1979,28 @@ function PrincipalSponsorModal({
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Male Principal Sponsor *
               </label>
               <input
                 type="text"
                 value={formData.MalePrincipalSponsor}
                 onChange={(e) => setFormData({ ...formData, MalePrincipalSponsor: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 placeholder="Enter male principal sponsor name"
                 required
                 autoFocus
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Female Principal Sponsor
               </label>
               <input
                 type="text"
                 value={formData.FemalePrincipalSponsor}
                 onChange={(e) => setFormData({ ...formData, FemalePrincipalSponsor: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 placeholder="Enter female principal sponsor name (optional)"
               />
             </div>
@@ -2007,7 +2009,7 @@ function PrincipalSponsorModal({
             <Button
               onClick={onSave}
               disabled={isLoading || !formData.MalePrincipalSponsor.trim()}
-              className="flex-1 bg-[#C2D3C3] hover:bg-[#B28383] text-white disabled:opacity-50 transition-colors"
+              className="flex-1 bg-[#738A6E] hover:bg-[#324D3E] text-white disabled:opacity-50 transition-colors"
             >
               {isLoading ? (
                 <>
@@ -2048,31 +2050,31 @@ function AddGuestModal({
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30">
-        <div className="sticky top-0 bg-[#F5F0ED] px-6 py-4 border-b border-[#C2D3C3]/30 rounded-t-2xl">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30">
+        <div className="sticky top-0 bg-[#D9E5D7] px-6 py-4 border-b border-[#738A6E]/30 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#A78256] font-sans">Add New Guest</h3>
+            <h3 className="text-xl font-bold text-[#324D3E] font-sans">Add New Guest</h3>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-[#C2D3C3]/20 rounded-lg transition-colors text-[#A78256]/70 hover:text-[#A78256]"
+              className="p-2 hover:bg-[#738A6E]/20 rounded-lg transition-colors text-[#324D3E]/70 hover:text-[#324D3E]"
             >
               <XCircle className="h-5 w-5" />
             </button>
           </div>
         </div>
         <div className="p-6">
-          <p className="text-sm text-[#A78256]/70 mb-4 font-sans leading-relaxed">
+          <p className="text-sm text-[#324D3E]/70 mb-4 font-sans leading-relaxed">
             Just type in your guest's name to add them to your guest list. After they are added, they'll be able to visit your wedding website, search for their name, and complete their RSVP — including their contact details, attendance confirmation, and the number of guests they'll be bringing.
           </p>
           <div>
-            <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+            <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
               Guest Name *
             </label>
             <input
               type="text"
               value={formData.Name}
               onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
-              className="w-full px-4 py-3 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+              className="w-full px-4 py-3 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
               placeholder="Enter guest name"
               required
               autoFocus
@@ -2087,7 +2089,7 @@ function AddGuestModal({
             <Button
               onClick={onSave}
               disabled={isLoading || !formData.Name.trim()}
-              className="flex-1 bg-[#C2D3C3] hover:bg-[#B28383] text-white disabled:opacity-50 transition-colors"
+              className="flex-1 bg-[#738A6E] hover:bg-[#324D3E] text-white disabled:opacity-50 transition-colors"
             >
               {isLoading ? (
                 <>
@@ -2130,13 +2132,13 @@ function EditGuestModal({
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30 max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-[#F5F0ED] px-6 py-4 border-b border-[#C2D3C3]/30 rounded-t-2xl">
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30 max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-[#D9E5D7] px-6 py-4 border-b border-[#738A6E]/30 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#A78256] font-sans">Edit Guest</h3>
+            <h3 className="text-xl font-bold text-[#324D3E] font-sans">Edit Guest</h3>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-[#C2D3C3]/20 rounded-lg transition-colors text-[#A78256]/70 hover:text-[#A78256]"
+              className="p-2 hover:bg-[#738A6E]/20 rounded-lg transition-colors text-[#324D3E]/70 hover:text-[#324D3E]"
             >
               <XCircle className="h-5 w-5" />
             </button>
@@ -2145,36 +2147,36 @@ function EditGuestModal({
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Name *
               </label>
               <input
                 type="text"
                 value={formData.Name}
                 onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Email
               </label>
               <input
                 type="email"
                 value={formData.Email}
                 onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 RSVP Status *
               </label>
               <select
                 value={formData.RSVP}
                 onChange={(e) => setFormData({ ...formData, RSVP: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans bg-white transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans bg-white transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 required
               >
                 <option value="">Select status</option>
@@ -2184,7 +2186,7 @@ function EditGuestModal({
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Number of Guests *
               </label>
               <input
@@ -2192,19 +2194,19 @@ function EditGuestModal({
                 min="1"
                 value={formData.Guest || "1"}
                 onChange={(e) => setFormData({ ...formData, Guest: e.target.value || "1" })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 placeholder="1"
                 required
               />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-[#A78256] mb-2 font-sans">
+              <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
                 Message
               </label>
               <textarea
                 value={formData.Message}
                 onChange={(e) => setFormData({ ...formData, Message: e.target.value })}
-                className="w-full px-4 py-2 border-2 border-[#C2D3C3]/20 focus:border-[#C2D3C3] rounded-xl text-sm font-sans placeholder:text-[#A78256]/40 transition-all duration-300 focus:ring-4 focus:ring-[#C2D3C3]/10"
+                className="w-full px-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl text-sm font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
                 rows={3}
               />
             </div>
@@ -2213,7 +2215,7 @@ function EditGuestModal({
             <Button
               onClick={onSave}
               disabled={isLoading}
-              className="flex-1 bg-[#C2D3C3] hover:bg-[#B28383] text-white transition-colors"
+              className="flex-1 bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
             >
               {isLoading ? (
                 <>
@@ -2239,16 +2241,16 @@ function ConfirmModal({ open, title, message, onCancel, onConfirm }: { open: boo
   if (!open) return null
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-sm bg-white rounded-2xl shadow-2xl border border-[#C2D3C3]/30">
-        <div className="px-5 py-4 border-b border-[#C2D3C3]/20">
-          <h3 className="text-base sm:text-lg font-bold text-[#A78256]">{title}</h3>
+      <div className="w-full max-w-sm bg-white rounded-2xl shadow-2xl border border-[#738A6E]/30">
+        <div className="px-5 py-4 border-b border-[#738A6E]/20">
+          <h3 className="text-base sm:text-lg font-bold text-[#324D3E]">{title}</h3>
         </div>
-        <div className="px-5 py-4 text-sm sm:text-base text-[#A78256]/80">
+        <div className="px-5 py-4 text-sm sm:text-base text-[#324D3E]/80">
           {message}
         </div>
-        <div className="px-5 py-4 flex justify-end gap-2 border-t border-[#C2D3C3]/20">
-          <button onClick={onCancel} className="px-4 py-2 text-sm rounded-lg border border-[#C2D3C3]/30 text-[#A78256] hover:bg-[#C2D3C3]/20 transition-colors">Cancel</button>
-          <button onClick={onConfirm} className="px-4 py-2 text-sm rounded-lg bg-[#B28383] text-white hover:bg-[#B28383]/90 transition-colors">Delete</button>
+        <div className="px-5 py-4 flex justify-end gap-2 border-t border-[#738A6E]/20">
+          <button onClick={onCancel} className="px-4 py-2 text-sm rounded-lg border border-[#738A6E]/30 text-[#324D3E] hover:bg-[#738A6E]/20 transition-colors">Cancel</button>
+          <button onClick={onConfirm} className="px-4 py-2 text-sm rounded-lg bg-[#324D3E] text-white hover:bg-[#324D3E]/90 transition-colors">Delete</button>
         </div>
       </div>
     </div>
