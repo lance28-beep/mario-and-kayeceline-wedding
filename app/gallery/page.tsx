@@ -119,7 +119,7 @@ export default async function GalleryPage() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E6CFC9]/30 border-2 border-[#E6CFC9]/40 rounded-full text-[#9B7C6A] font-semibold text-xs sm:text-sm md:text-base shadow-md">
-                  #JulaineAndCristopher
+                  #JUNfoundTheKAYEtoForever
                 </span>
               </div>
               <Link
