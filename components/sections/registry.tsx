@@ -3,16 +3,9 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Section } from "@/components/section"
-import { Heart, CreditCard, Smartphone, Banknote } from "lucide-react"
+import { Smartphone, Banknote } from "lucide-react"
 
 const paymentMethods = [
-  {
-    id: "paymaya",
-    label: "PayMaya",
-    description: "Scan via PayMaya app",
-    accent: "from-[#E6CFC9] to-[#A1857A]",
-    Icon: CreditCard,
-  },
   {
     id: "gcash",
     label: "GCash",
@@ -21,8 +14,8 @@ const paymentMethods = [
     Icon: Smartphone,
   },
   {
-    id: "metroBank",
-    label: "MetroBank",
+    id: "bpi",
+    label: "BPI",
     description: "Direct bank transfer",
     accent: "from-[#E6CFC9] to-[#BCCFC0]",
     Icon: Banknote,
@@ -31,14 +24,13 @@ const paymentMethods = [
 
 type PaymentId = typeof paymentMethods[number]["id"]
 
-const qrImageByMethod: Record<PaymentId, string | null> = {
-  paymaya: "/QR/Maya.png",
-  gcash: null,
-  metroBank: null,
+const qrImageByMethod: Record<PaymentId, string> = {
+  gcash: "/QR/Gcash.png",
+  bpi: "/QR/BPI.png",
 }
 
 export function Registry() {
-  const [activeMethod, setActiveMethod] = useState<PaymentId>("paymaya")
+  const [activeMethod, setActiveMethod] = useState<PaymentId>("gcash")
 
   const activeDetails = paymentMethods.find(method => method.id === activeMethod)
 
@@ -112,22 +104,16 @@ export function Registry() {
                 </div>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-56 h-56 sm:w-64 sm:h-64 border-2 border-dashed border-[#324D3E]/40 rounded-xl sm:rounded-2xl flex items-center justify-center bg-white relative overflow-hidden">
-                    {qrImageByMethod[activeMethod] ? (
-                      <Image
-                        src={qrImageByMethod[activeMethod]!}
-                        alt={`${activeDetails.label} QR code`}
-                        fill
-                        sizes="256px"
-                        className="object-contain p-4"
-                      />
-                    ) : (
-                      <span className="text-[#324D3E] text-sm sm:text-base font-medium">
-                        {activeDetails.label} QR Placeholder
-                      </span>
-                    )}
+                    <Image
+                      src={qrImageByMethod[activeMethod]}
+                      alt={`${activeDetails.label} QR code`}
+                      fill
+                      sizes="256px"
+                      className="object-contain p-4"
+                    />
                   </div>
                   <p className="text-sm sm:text-base text-[#324D3E] max-w-md">
-                    Tap the buttons above to switch between QR codes. Only one payment option is shown at a time for clarity.
+                    Tap the buttons above to switch between payment options.
                   </p>
                 </div>
               </div>

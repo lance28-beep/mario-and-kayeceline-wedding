@@ -260,84 +260,10 @@ export function Countdown() {
         </div>
       </div>
 
-      {/* Save The Date Card */}
-      <div className="relative z-10 px-4">
-        <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6">
-          <p
-            className="text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[#5E725E]"
-            style={{ textShadow: "0 6px 18px rgba(94, 114, 94, 0.3)" }}
-          >
-            Save The Date
-          </p>
 
-          <div className="flex items-center justify-center gap-2 text-[#A1857A]">
-            <span className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent via-current to-transparent opacity-70" />
-            <span className="text-xs uppercase tracking-[0.3em]">for</span>
-            <span className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent via-current to-transparent opacity-70" />
-          </div>
-
-          <div
-            className="w-full max-w-3xl text-[#324D3E]"
-            style={{ textShadow: "0 10px 30px rgba(141, 165, 139, 0.35)" }}
-          >
-            <div className="flex flex-col items-center gap-2 sm:gap-3 uppercase">
-              <span className="text-[10px] sm:text-xs md:text-sm tracking-[0.35em] sm:tracking-[0.45em]">
-                {ceremonyMonth}
-              </span>
-              <div className="flex w-full items-center gap-2 sm:gap-3 md:gap-5">
-                <div className="flex flex-1 items-center gap-2 sm:gap-3">
-                  <span className="h-px flex-1 bg-[#324D3E]/30" />
-                  <span className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em]">
-                    {ceremonyDayName || "Ceremony Day"}
-                  </span>
-                  <span className="h-px w-10 sm:w-12 md:w-14 bg-[#324D3E]/30" />
-                </div>
-                <div className="relative flex items-center justify-center px-2 sm:px-4 md:px-8">
-                  <span className="absolute inset-0 mx-auto h-[80%] w-[110px] sm:w-[160px] md:w-[200px] rounded-full bg-gradient-to-b from-[#E6CFC9] via-[#BCCFC0] to-[#8EA58B] blur-[28px] opacity-70" />
-                  <span
-                    className="relative font-tiktok text-[3rem] sm:text-[4.25rem] md:text-[5.25rem] lg:text-[6rem] leading-none tracking-[0.08em]"
-                    style={{
-                      color: "#5E725E",
-                      backgroundImage: "linear-gradient(180deg, #FFFFFF 15%, #E6CFC9 55%, #7F9A7C 100%)",
-                      WebkitBackgroundClip: "text",
-                      backgroundClip: "text",
-                      textShadow:
-                        "0 0 20px rgba(255,255,255,0.65), 0 0 45px rgba(188,207,192,0.55), 0 14px 32px rgba(75,91,76,0.35)",
-                    }}
-                  >
-                    {ceremonyDayNumber.padStart(2, "0")}
-                  </span>
-                </div>
-                <div className="flex flex-1 items-center gap-2 sm:gap-3 justify-end">
-                  <span className="h-px w-10 sm:w-12 md:w-14 bg-[#324D3E]/30" />
-                  <span className="text-[10px] sm:text-xs md:text-sm tracking-[0.28em] sm:tracking-[0.35em]">
-                    {ceremonyTimeDisplay}
-                  </span>
-                  <span className="h-px flex-1 bg-[#324D3E]/30" />
-                </div>
-              </div>
-              <span className="text-[10px] sm:text-xs md:text-sm tracking-[0.35em] sm:tracking-[0.45em]">
-                {ceremonyYear}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div className="relative z-10 mt-8 flex justify-center px-4">
-        <blockquote
-          className="max-w-md text-center text-[#4F5F4F] border-t border-b border-[#4F5F4F]/15 py-4"
-          style={{ fontFamily: '"Montserrat", sans-serif' }}
-        >
-          <p className="text-xs sm:text-sm md:text-base font-medium tracking-[0.2em] uppercase leading-relaxed">
-            “We love because
-            <br />
-            he first loved us”
-          </p>
-          <p className="mt-3 text-[10px] sm:text-xs tracking-[0.4em] text-[#6B7C6B] uppercase">
-            1 John 4:19
-          </p>
-        </blockquote>
+
       </div>
     </Section>
   )

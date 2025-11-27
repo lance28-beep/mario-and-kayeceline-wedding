@@ -129,17 +129,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/55 via-[#8EA58B]/35 to-transparent z-0" />
       </div>
 
-      {isMobile && (
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 z-10 w-full md:hidden pointer-events-none px-6">
-          <img
-            src="/decoration/center-we-do.png"
-            alt="We Do emblem"
-            className="w-full max-w-none"
-            loading="lazy"
-          />
-        </div>
-      )}
-
       <div className="relative z-10 flex w-full items-end justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-24 pb-10 sm:pt-32 sm:pb-16 md:pb-20 lg:pb-24 min-h-screen">
         <div
           className={`relative w-full max-w-[420px] sm:max-w-3xl lg:max-w-5xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-16 transition-all duration-1000 ease-out ${
