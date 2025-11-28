@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/section"
 import { siteConfig } from "@/content/site"
-import { Clock, Utensils, Car, Shirt, Copy, Check, Navigation, Heart, Camera, X, MapPin } from "lucide-react"
+import { Clock, Utensils, Car, Copy, Check, Navigation, Heart, Camera, X, MapPin } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
@@ -123,7 +123,7 @@ export function Details() {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0d1a13]/95 via-[#0d1a13]/60 to-transparent"></div>
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0d1a13]/95 via-[#0d1a13]/60 to-transparent"></div> */}
             <div className="absolute inset-0 flex flex-col justify-end px-4 sm:px-6 pb-4 sm:pb-6 text-white">
               {/* <p className="text-xs sm:text-sm tracking-[0.4em] uppercase opacity-80">
                 Orchid Garden Suites Manila
@@ -188,36 +188,23 @@ export function Details() {
         </div>
       </div>
 
+      {/* Full-width Image */}
+      <div className="relative z-10 mb-5 sm:mb-7 left-1/2 -translate-x-1/2 w-screen lg:static lg:left-auto lg:translate-x-0 lg:w-full lg:max-w-5xl lg:mx-auto">
+        <div className="relative w-full">
+          <Image
+            src="/images/5.jpg"
+            alt="Event details"
+            width={1920}
+            height={1080}
+            className="w-full h-auto object-cover"
+            priority={false}
+          />
+        </div>
+      </div>
+
       {/* Additional Information - Compact for mobile */}
       <div className="relative z-10 mb-5 sm:mb-7 max-w-4xl mx-auto px-3 sm:px-5">
-        <div className="text-center mb-4 sm:mb-5">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-[#324D3E]">Important Information</h3>
-          <p className="text-xs text-[#324D3E]/80">Everything you need to know</p>
-        </div>
-
         <div className="space-y-3 sm:space-y-4">
-          {/* Attire image */}
-          <div className="relative rounded-2xl border border-white/30 bg-white/80 backdrop-blur-lg shadow-[0_18px_40px_rgba(50,77,62,0.15)] p-4 sm:p-5 overflow-hidden">
-            <div className="flex items-center justify-center gap-2 mb-3 relative z-10">
-              <div className="p-1.5 rounded-full shadow-md bg-white/80 border border-[#324D3E]/20">
-                <Shirt className="w-3.5 h-3.5 text-[#324D3E]" />
-              </div>
-              <h4 className="font-bold text-sm sm:text-base text-[#324D3E]">Attire Guidelines</h4>
-            </div>
-            <div className="relative w-full rounded-2xl overflow-hidden border border-white/50 shadow-xl bg-white/40">
-              <Image
-                src="/Details/attireguidelines.png"
-                alt="Attire guidelines"
-                width={1600}
-                height={1200}
-                className="w-full h-full object-contain bg-white"
-                priority={false}
-              />
-            </div>
-            <p className="text-xs sm:text-sm text-center mt-3 text-[#324D3E] font-semibold">
-              Note: Strictly NO Jeans and Shorts
-            </p>
-          </div>
 
           {/* Travel & Parking - Compact */}
           <div className="relative rounded-2xl border border-white/30 bg-white/80 backdrop-blur-lg shadow-[0_18px_40px_rgba(50,77,62,0.15)] p-4 sm:p-5 overflow-hidden">

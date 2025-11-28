@@ -7,9 +7,10 @@ const BackgroundMusic = () => {
   const { audioRef } = useAudio()
 
   useEffect(() => {
+    const audioEl = audioRef.current
+    if (!audioEl) return
+
     const handleUserInteraction = () => {
-      const audioEl = audioRef.current
-      if (!audioEl) return
       audioEl.play().then(() => {
         document.removeEventListener("click", handleUserInteraction)
         document.removeEventListener("touchstart", handleUserInteraction)
@@ -18,8 +19,16 @@ const BackgroundMusic = () => {
       })
     }
 
-    document.addEventListener("click", handleUserInteraction)
-    document.addEventListener("touchstart", handleUserInteraction)
+    const setupUserInteraction = () => {
+      document.addEventListener("click", handleUserInteraction)
+      document.addEventListener("touchstart", handleUserInteraction)
+    }
+
+    // Attempt autoplay immediately and fall back to interaction listeners
+    audioEl.play().catch((error) => {
+      console.log("Autoplay blocked, waiting for user interaction:", error)
+      setupUserInteraction()
+    })
 
     return () => {
       audioRef.current?.pause()

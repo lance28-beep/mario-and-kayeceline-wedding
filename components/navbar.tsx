@@ -8,14 +8,12 @@ import StaggeredMenu from "./StaggeredMenu"
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#countdown", label: "Countdown" },
+  { href: "#couple-video", label: "Couple Video" },
   { href: "#gallery", label: "Gallery" },
   { href: "#messages", label: "Messages" },
   { href: "#details", label: "Details" },
   { href: "#entourage", label: "Entourage" },
-  { href: "#sponsors", label: "Sponsors" },
-  { href: "#guest-list", label: "RSVP" },
-  { href: "#registry", label: "Registry" },
+  { href: "#rsvp", label: "RSVP" },
   { href: "#faq", label: "FAQ" },
 ]
 
@@ -94,7 +92,7 @@ export function Navbar() {
           <Link href="#home" className="flex-shrink-0 group relative z-10">
             <div className="relative flex items-center">
               <Image
-                src="/monogram/updated monogram.png"
+                src="/monogram/MK MONOGRAM.png"
                 alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
                 width={80}
                 height={80}
@@ -146,10 +144,10 @@ export function Navbar() {
                 displaySocials={false}
                 displayItemNumbering={true}
                 menuButtonColor="#E6CFC9"
-                openMenuButtonColor="#C3D8CA"
+                openMenuButtonColor="#324D3E"
                 changeMenuColorOnOpen={true}
-                colors={["#324D3E", "#486957", "#607F6E", "#A8C0AF", "#E6CFC9"]}
-                accentColor="#E6CFC9"
+                colors={["#324D3E", "#486957", "#607F6E", "#A8C0AF", "#EDD6AC"]}
+                accentColor="#324D3E"
                 isFixed={true}
                 onMenuOpen={() => {}}
                 onMenuClose={() => {}}

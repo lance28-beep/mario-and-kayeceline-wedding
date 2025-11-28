@@ -320,8 +320,8 @@ export function Hero() {
             {/* CTA Buttons & download */}
             <div className="mt-4 md:mt-6 lg:mt-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
               <a
-                href="#guest-list"
-                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/50 bg-[#324D3E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#324D3E]/90 hover:border-[#E6CFC9]/70 hover:shadow-lg"
+                href="#rsvp"
+                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-white/40 bg-[#324D3E]/90 px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-white backdrop-blur-sm transition-all duration-300 hover:bg-[#324D3E] hover:border-white/60 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 <span className="flex items-center justify-center">
                   RSVP

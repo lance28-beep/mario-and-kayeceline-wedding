@@ -18,25 +18,23 @@ export function EntourageImage() {
 
 
       {/* Entourage Image */}
-      <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative"
-          >
-            <Image
-              src="/decoration/entourage.png"
-              alt="Wedding Entourage and Principal Sponsors"
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl"
-              priority={false}
-            />
-          </motion.div>
-        </div>
+      <div className="relative z-10 left-1/2 -translate-x-1/2 w-screen lg:static lg:left-auto lg:translate-x-0 lg:w-full lg:max-w-5xl lg:mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative"
+        >
+          <Image
+            src="/images/4.jpg"
+            alt="Wedding Entourage and Principal Sponsors"
+            width={1920}
+            height={1080}
+            className="w-full h-auto object-cover"
+            priority={false}
+          />
+        </motion.div>
       </div>
     </Section>
   )

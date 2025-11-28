@@ -4,22 +4,23 @@ import { Suspense } from "react"
 import dynamic from "next/dynamic"
 import { AudioProvider } from "@/contexts/audio-context"
 import { Hero } from "@/components/sections/hero"
-import { Countdown } from "@/components/sections/countdown"
+// import { Countdown } from "@/components/sections/countdown"
 import { CoupleVideo } from "@/components/sections/couple-video"
 import { WeddingTimeline } from "@/components/sections/wedding-timeline"
 import { Gallery } from "@/components/sections/gallery"
 import { Messages } from "@/components/sections/messages"
 import { Details } from "@/components/sections/details"
 import { EntourageImage } from "@/components/sections/entourage-image"
-import { BookOfGuests } from "@/components/sections/book-of-guests"
+// import { BookOfGuests } from "@/components/sections/book-of-guests"
 import { Registry } from "@/components/sections/registry"
 import { FAQ } from "@/components/sections/faq"
 import { SnapShare } from "@/components/sections/snap-share"
 import { Footer } from "@/components/sections/footer"
 import BackgroundMusic from "@/components/background-music"
+import { RSVP } from "@/components/sections/rsvp"
 
 const Silk = dynamic(() => import("@/components/silk"), { ssr: false })
-const GuestList = dynamic(() => import("@/components/sections/guest-list").then(mod => ({ default: mod.GuestList })), { ssr: false })
+// const GuestList = dynamic(() => import("@/components/sections/guest-list").then(mod => ({ default: mod.GuestList })), { ssr: false })
 
 export default function Home() {
   const enableDecor = process.env.NEXT_PUBLIC_ENABLE_DECOR !== 'false'
@@ -47,8 +48,9 @@ export default function Home() {
           <Details />
           <WeddingTimeline />
           <EntourageImage />
-          <GuestList />
-          <BookOfGuests />
+          <RSVP />
+          {/* <GuestList /> */}
+          {/* <BookOfGuests /> */}
           <Registry />
           <FAQ />
           <SnapShare />

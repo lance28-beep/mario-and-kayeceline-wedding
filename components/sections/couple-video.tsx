@@ -224,7 +224,7 @@ export function CoupleVideo() {
                   >
                     {/* Custom poster image */}
                     <Image
-                      src="https://img.youtube.com/vi/2iLHTXpOe7I/maxresdefault.jpg"
+                      src="/images/mario-kaye-cover.png"
                       alt="Video thumbnail"
                       fill
                       className="object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -237,8 +237,8 @@ export function CoupleVideo() {
                     {/* Inner shadow for depth */}
                     <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.3)]" />
                     
-                    {/* Custom Play Button with enhanced shadows */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Custom Play Button with enhanced shadows - positioned in bottom left corner */}
+                    <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8">
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
@@ -248,8 +248,8 @@ export function CoupleVideo() {
                         <div className="absolute inset-0 rounded-full bg-[#8EA58B]/30 blur-2xl scale-150 group-hover:bg-[#E6CFC9]/40 group-hover:scale-[1.7] transition-all duration-300" />
                         
                         {/* Play button */}
-                        <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white/95 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.3),0_16px_48px_rgba(0,0,0,0.2),0_0_0_1px_rgba(142,165,139,0.1)] group-hover:bg-white group-hover:shadow-[0_12px_48px_rgba(0,0,0,0.4),0_24px_64px_rgba(142,165,139,0.3),0_0_0_1px_rgba(142,165,139,0.2)] transition-all duration-300">
-                          <Play className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#8EA58B] fill-[#8EA58B] ml-1 drop-shadow-md" />
+                        <div className="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white/95 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.3),0_16px_48px_rgba(0,0,0,0.2),0_0_0_1px_rgba(142,165,139,0.1)] group-hover:bg-white group-hover:shadow-[0_12px_48px_rgba(0,0,0,0.4),0_24px_64px_rgba(142,165,139,0.3),0_0_0_1px_rgba(142,165,139,0.2)] transition-all duration-300">
+                          <Play className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#8EA58B] fill-[#8EA58B] ml-1 drop-shadow-md" />
                         </div>
                       </motion.div>
                     </div>

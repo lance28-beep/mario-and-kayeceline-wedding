@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion } from "motion/react"
-import { Instagram, Twitter, Facebook, MapPin, Calendar, Clock, Heart, Music2 } from "lucide-react"
+import { MapPin, Calendar, Clock, Heart } from "lucide-react"
 import { siteConfig } from "@/content/site"
 
 export function Footer() {
@@ -72,14 +72,6 @@ export function Footer() {
     },
   }
 
-  const nav = [
-    { label: "Home", href: "#home" },
-    { label: "Events", href: "#details" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Snap & Share", href: "#snap-share" },
-    { label: "RSVP", href: "#guest-list" },
-  ] as const
-
   return (
     <footer 
       className="relative z-20 mt-16 overflow-hidden bg-[#D9E5D7]"
@@ -131,7 +123,7 @@ export function Footer() {
           className="relative"
         >
           <Image
-            src="/monogram/updated monogram.png"
+            src="/monogram/MK MONOGRAM.png"
             alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
             width={384}
             height={384}
@@ -144,7 +136,7 @@ export function Footer() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-8 pb-8 sm:pb-10 md:pb-12">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10 md:mb-12" variants={staggerChildren} initial="initial" animate="animate">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10 md:mb-12" variants={staggerChildren} initial="initial" animate="animate">
           {/* Couple Info */}
           <motion.div className="lg:col-span-2" variants={fadeInUp}>
             <div className="mb-6 sm:mb-8">
@@ -220,63 +212,6 @@ export function Footer() {
             </motion.div>
           </motion.div>
 
-          {/* Contact + Quick Links */}
-          <motion.div className="space-y-6 sm:space-y-7 md:space-y-8" variants={fadeInUp}>
-            <div>
-              <h4 className="font-playfair font-bold text-base sm:text-lg md:text-xl mb-4 sm:mb-5 md:mb-6 flex items-center gap-2 sm:gap-2.5 md:gap-3 text-[#324D3E]">
-                <div className="w-1.5 sm:w-2 h-6 sm:h-7 md:h-8 bg-[#324D3E]/60 rounded-full" /> Follow Us
-              </h4>
-              <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 flex-wrap">
-                <a 
-                  href="https://www.facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-[#D9E5D7]/40 ring-1 ring-[#324D3E]/30 hover:bg-[#D9E5D7]/60 hover:ring-[#324D3E]/50 transition-all duration-200 hover:scale-110"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-[#324D3E]" />
-                </a>
-                <a 
-                  href="https://www.instagram.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-[#D9E5D7]/40 ring-1 ring-[#324D3E]/30 hover:bg-[#D9E5D7]/60 hover:ring-[#324D3E]/50 transition-all duration-200 hover:scale-110"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-[#324D3E]" />
-                </a>
-                <a 
-                  href="https://www.youtube.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-[#D9E5D7]/40 ring-1 ring-[#324D3E]/30 hover:bg-[#D9E5D7]/60 hover:ring-[#324D3E]/50 transition-all duration-200 hover:scale-110"
-                  aria-label="YouTube"
-                >
-                  <Music2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#324D3E]" />
-                </a>
-                <a 
-                  href="https://x.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-[#D9E5D7]/40 ring-1 ring-[#324D3E]/30 hover:bg-[#D9E5D7]/60 hover:ring-[#324D3E]/50 transition-all duration-200 hover:scale-110"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-[#324D3E]" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h5 className="font-playfair font-bold text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-[#324D3E]">Quick Links</h5>
-              <div className="space-y-1.5 sm:space-y-2">
-                {nav.map((item) => (
-                  <a key={item.href} href={item.href} className="block text-[#324D3E]/90 hover:text-[#324D3E] transition-colors duration-200 font-lora text-xs sm:text-sm">
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Bottom Row */}
