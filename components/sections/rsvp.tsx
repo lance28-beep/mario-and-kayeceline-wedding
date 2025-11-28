@@ -132,7 +132,7 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
               RSVP
             </h3>
             <p className="text-[10px] sm:text-xs md:text-sm text-foreground/70 font-lora">
-              Please respond on or before January 1, 2025
+              Please respond on or before January 6, 2025
             </p>
           </div>
 
