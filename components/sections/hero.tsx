@@ -44,6 +44,12 @@ export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
 
   // Detect screen size and update isMobile state
   useEffect(() => {
@@ -106,6 +112,33 @@ export function Hero() {
     }
   }, [imagesLoaded])
 
+  // Countdown timer
+  useEffect(() => {
+    const weddingDate = new Date("2026-02-06T13:00:00").getTime()
+
+    const updateCountdown = () => {
+      const now = new Date().getTime()
+      const distance = weddingDate - now
+
+      if (distance < 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        return
+      }
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      })
+    }
+
+    updateCountdown()
+    const timer = setInterval(updateCountdown, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#BCCFC0]">
       <div className="absolute inset-0 w-full h-full">
@@ -137,15 +170,9 @@ export function Hero() {
         >
           <div className="relative z-10 flex flex-col items-center text-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {/* Bible verse */}
-            <div className="space-y-1 md:space-y-1.5 text-[#FFFFFF] mt-16 sm:mt-0" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
+            <div className="text-[#FFFFFF] mt-16 sm:mt-0" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
               <p className="text-[10px] sm:text-sm md:text-base lg:text-lg tracking-[0.14em] md:tracking-[0.18em] lg:tracking-[0.22em]">
-                "We love because
-              </p>
-              <p className="text-[10px] sm:text-sm md:text-base lg:text-lg tracking-[0.14em] md:tracking-[0.18em] lg:tracking-[0.22em]">
-                He first loved us"
-              </p>
-              <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.18em] md:tracking-[0.22em] lg:tracking-[0.26em] mt-0.5">
-                1 John 4:19
+                "We love because He first loved us" - 1 John 4:19
               </p>
             </div>
 
@@ -247,6 +274,70 @@ export function Hero() {
                   2026
                 </span>
               </div>
+            </div>
+
+            {/* Countdown Timer */}
+            <div className="mt-4 md:mt-6 text-center">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-wrap">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.days).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Days
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.hours).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Hours
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.minutes).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Minutes
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.seconds).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Seconds
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons & download */}
+            <div className="mt-4 md:mt-6 lg:mt-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
+              <a
+                href="#guest-list"
+                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/50 bg-[#324D3E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#324D3E]/90 hover:border-[#E6CFC9]/70 hover:shadow-lg"
+              >
+                <span className="flex items-center justify-center">
+                  RSVP
+                </span>
+              </a>
+              <a
+                href="/invitation/White and Beige Floral Minimalist Wedding Invitation - 1.png"
+                download="Mario-and-KayeCeline-Wedding-Invitation.png"
+                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/50 bg-[#8EA58B] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.15em] md:tracking-[0.18em] lg:tracking-[0.22em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#8EA58B]/90 hover:border-[#E6CFC9]/70 hover:shadow-lg"
+              >
+                <span className="flex items-center justify-center gap-1.5 md:gap-2">
+                  <Download size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                  <span className="sr-only sm:hidden">Download Invitation</span>
+                  <span className="hidden sm:inline">Download Invitation</span>
+                </span>
+              </a>
             </div>
 
           </div>

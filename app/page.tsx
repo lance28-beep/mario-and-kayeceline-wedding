@@ -40,7 +40,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10">
           <Hero />
-          <Countdown />
+          {/* <Countdown /> */}
           <CoupleVideo />
           <Gallery />
           <Messages />

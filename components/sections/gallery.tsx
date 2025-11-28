@@ -124,34 +124,6 @@ export function Gallery() {
         </div>
       </div>
 
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-36 sm:w-48 md:w-56 lg:w-64 opacity-80 scale-x-[-1]"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-32 sm:w-48 md:w-60 lg:w-72 opacity-85 scale-x-[-1]"
-        loading="lazy"
-      />
 
       {/* Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-10 md:mb-12 px-4">

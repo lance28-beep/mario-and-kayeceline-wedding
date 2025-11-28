@@ -104,13 +104,13 @@ export function Registry() {
                 </div>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-56 h-56 sm:w-64 sm:h-64 border-2 border-dashed border-[#324D3E]/40 rounded-xl sm:rounded-2xl flex items-center justify-center bg-white relative overflow-hidden">
-                    <Image
+                      <Image
                       src={qrImageByMethod[activeMethod]}
-                      alt={`${activeDetails.label} QR code`}
-                      fill
-                      sizes="256px"
-                      className="object-contain p-4"
-                    />
+                        alt={`${activeDetails.label} QR code`}
+                        fill
+                        sizes="256px"
+                        className="object-contain p-4"
+                      />
                   </div>
                   <p className="text-sm sm:text-base text-[#324D3E] max-w-md">
                     Tap the buttons above to switch between payment options.

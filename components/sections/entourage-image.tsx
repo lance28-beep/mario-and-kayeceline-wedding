@@ -16,35 +16,6 @@ export function EntourageImage() {
         <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#E6CFC9]/15 to-transparent" />
       </div>
 
-      {/* Corner decorations */}
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90 scale-x-[-1]"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 opacity-95"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 opacity-95 scale-x-[-1]"
-        loading="lazy"
-      />
 
       {/* Entourage Image */}
       <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-10">

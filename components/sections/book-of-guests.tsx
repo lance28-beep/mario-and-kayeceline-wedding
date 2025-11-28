@@ -115,43 +115,6 @@ export function BookOfGuests() {
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFBD87]/40 to-transparent" />
       </div>
 
-      {/* Corner decorations - enhanced styling */}
-      <Image
-        src="/decoration/corner-down-left.png"
-        alt=""
-        width={256}
-        height={256}
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72 opacity-85 z-0"
-        loading="lazy"
-      />
-      <Image
-        src="/decoration/corner-down-left.png"
-        alt=""
-        width={256}
-        height={256}
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72 opacity-85 scale-x-[-1] z-0"
-        loading="lazy"
-      />
-      <Image
-        src="/decoration/top-right-corner.png"
-        alt=""
-        width={288}
-        height={288}
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-32 sm:w-48 md:w-60 lg:w-72 xl:w-80 opacity-90 z-0"
-        loading="lazy"
-      />
-      <Image
-        src="/decoration/top-right-corner.png"
-        alt=""
-        width={288}
-        height={288}
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-32 sm:w-48 md:w-60 lg:w-72 xl:w-80 opacity-90 scale-x-[-1] z-0"
-        loading="lazy"
-      />
 
       {/* Section Header */}
       <div className="relative text-center mb-4 sm:mb-6 md:mb-8 px-3 sm:px-4">

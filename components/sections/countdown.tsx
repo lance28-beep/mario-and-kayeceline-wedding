@@ -173,34 +173,6 @@ export function Countdown() {
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E6CFC9]/30 to-transparent" />
       </div>
 
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90 scale-x-[-1]"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 opacity-95"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 opacity-95 scale-x-[-1]"
-        loading="lazy"
-      />
 
       {/* Monogram - centered at top */}
       <div className="relative flex justify-center pt-8 sm:pt-10 md:pt-12 mb-6 sm:mb-8 md:mb-10 z-10">
