@@ -2,7 +2,6 @@ import fs from "fs/promises"
 import path from "path"
 import Link from "next/link"
 import MasonryGallery from "@/components/masonry-gallery"
-import { GalleryQRSection } from "@/components/gallery-qr-section"
 
 // Generate on each request so newly added images in public/ appear without a rebuild
 export const dynamic = "force-dynamic"
@@ -22,16 +21,8 @@ async function getImagesFrom(dir: string) {
 }
 
 export default async function GalleryPage() {
-  const [desktop, mobile, frontGallery] = await Promise.all([
-    getImagesFrom("desktop-background"),
-    getImagesFrom("mobile-background"),
-    getImagesFrom("FrontGallery"),
-  ])
-  const images = [
-    ...desktop.map((src) => ({ src, category: "desktop" as const })),
-    ...mobile.map((src) => ({ src, category: "mobile" as const })),
-    ...frontGallery.map((src) => ({ src, category: "front" as const })),
-  ]
+  const mobile = await getImagesFrom("mobile-background")
+  const images = mobile.map((src) => ({ src, category: "mobile" as const }))
 
   return (
     <main className="min-h-screen bg-[#D9E5D7] relative overflow-hidden">
@@ -84,15 +75,7 @@ export default async function GalleryPage() {
             <p className="font-light">
               No images found. Add files to{" "}
               <code className="px-2 py-1 bg-[#D9E5D7]/80 rounded border border-[#9B7C6A]/30 text-[#9B7C6A]">
-                public/desktop-background
-              </code>{" "}
-              ,{" "}
-              <code className="px-2 py-1 bg-[#D9E5D7]/80 rounded border border-[#9B7C6A]/30 text-[#9B7C6A]">
                 public/mobile-background
-              </code>{" "}
-              or{" "}
-              <code className="px-2 py-1 bg-[#D9E5D7]/80 rounded border border-[#9B7C6A]/30 text-[#9B7C6A]">
-                public/FrontGallery
               </code>
               .
             </p>
