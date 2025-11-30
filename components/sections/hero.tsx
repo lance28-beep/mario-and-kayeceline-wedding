@@ -23,8 +23,8 @@ const desktopImages = [
 ]
 
 const mobileImages = [
-    "/mobile-background/couple (13).jpg",
     "/mobile-background/couple (2).jpg",
+    "/mobile-background/couple (13.jpg",
     "/mobile-background/couple (3).jpg",
     "/mobile-background/couple (4).jpg",
     "/mobile-background/couple (5).jpg",
@@ -170,7 +170,7 @@ export function Hero() {
         >
           <div className="relative z-10 flex flex-col items-center text-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {/* Bible verse */}
-            <div className="text-[#FFFFFF] mt-16 sm:mt-0" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
+            <div className="text-[#FFFFFF] -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 mb-20 sm:mb-24 md:mb-28 lg:mb-32" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
               <p className="text-[10px] sm:text-sm md:text-base lg:text-lg tracking-[0.14em] md:tracking-[0.18em] lg:tracking-[0.22em]">
                 "We love because He first loved us" - 1 John 4:19
               </p>

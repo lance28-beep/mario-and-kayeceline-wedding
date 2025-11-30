@@ -10,9 +10,9 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#couple-video", label: "Couple Video" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#entourage", label: "Entourage" },
   { href: "#messages", label: "Messages" },
   { href: "#details", label: "Details" },
-  { href: "#entourage", label: "Entourage" },
   { href: "#rsvp", label: "RSVP" },
   { href: "#faq", label: "FAQ" },
 ]

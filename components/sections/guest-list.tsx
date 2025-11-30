@@ -284,7 +284,7 @@ export function GuestList() {
         </h2>
         
         <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-white font-light max-w-xl mx-auto leading-relaxed px-2 mb-3 sm:mb-4 md:mb-5">
-          Please search for your name below to confirm your attendance. RSVP Deadline: January 6, 2026
+          Please search for your name below to confirm your attendance. RSVP Deadline: January 5, 2025
         </p>
         
         <div className="max-w-2xl mx-auto mb-4 sm:mb-6 px-4">

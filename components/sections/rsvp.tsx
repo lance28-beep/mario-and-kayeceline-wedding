@@ -132,7 +132,7 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
               RSVP
             </h3>
             <p className="text-[10px] sm:text-xs md:text-sm text-foreground/70 font-lora">
-              Please respond on or before January 6, 2025
+              Please respond on or before January 5, 2025
             </p>
           </div>
 
@@ -182,7 +182,7 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
                 }`}>
                   <Users className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-[#324D3E]" />
                 </div>
-                What are the names of people attending? *
+                Name: *
               </label>
               <div className="relative">
                 <Input
@@ -192,7 +192,7 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
                   onChange={(e) => setNames(e.target.value)}
                   onFocus={() => setFocusedField('names')}
                   onBlur={() => setFocusedField(null)}
-                  placeholder="Kindly list full names (First Name + Last Name)"
+                  placeholder="Full Name"
                   className={`rsvp-form-input w-full border-2 rounded-xl py-1.5 sm:py-2.5 md:py-3 lg:py-3.5 px-3 sm:px-4 md:px-5 text-[11px] sm:text-sm md:text-base font-lora placeholder:italic transition-all duration-300 bg-white/85 backdrop-blur-sm shadow-sm hover:shadow-md focus:shadow-lg ${
                     focusedField === 'names' 
                       ? 'border-[#8EA58B] focus:border-[#8EA58B] focus:ring-4 focus:ring-[#8EA58B]/20 shadow-lg' 
@@ -335,7 +335,7 @@ export function RSVP() {
             Unless we've said otherwise, this invite is good for one (1) seat only.
           </p>
           <p className="text-[11px] sm:text-sm md:text-base text-white font-light max-w-2xl mx-auto leading-relaxed px-1 sm:px-4 mt-1.5">
-            Please respond on or before <strong>January 1, 2025</strong> to include you on the final guest list and assure you of seat/s at the reception.
+            Please respond on or before <strong>January 5, 2025</strong> to include you on the final guest list and assure you of seat/s at the reception.
           </p>
         </div>
 

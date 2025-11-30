@@ -44,10 +44,10 @@ export default function Home() {
           {/* <Countdown /> */}
           <CoupleVideo />
           <Gallery />
+          <EntourageImage />
           <Messages />
           <Details />
           <WeddingTimeline />
-          <EntourageImage />
           <RSVP />
           {/* <GuestList /> */}
           {/* <BookOfGuests /> */}

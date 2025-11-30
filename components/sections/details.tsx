@@ -192,7 +192,7 @@ export function Details() {
       <div className="relative z-10 mb-5 sm:mb-7 left-1/2 -translate-x-1/2 w-screen lg:static lg:left-auto lg:translate-x-0 lg:w-full lg:max-w-5xl lg:mx-auto">
         <div className="relative w-full">
           <Image
-            src="/images/5.jpg"
+            src="/images/sdfsd.jpg"
             alt="Event details"
             width={1920}
             height={1080}
