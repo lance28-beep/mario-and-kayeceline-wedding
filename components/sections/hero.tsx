@@ -24,7 +24,7 @@ const desktopImages = [
 
 const mobileImages = [
     "/mobile-background/couple (2).jpg",
-    "/mobile-background/couple (13.jpg",
+    "/mobile-background/couple (13).jpg",
     "/mobile-background/couple (3).jpg",
     "/mobile-background/couple (4).jpg",
     "/mobile-background/couple (5).jpg",
