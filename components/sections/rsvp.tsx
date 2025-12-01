@@ -132,7 +132,7 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
               RSVP
             </h3>
             <p className="text-[10px] sm:text-xs md:text-sm text-foreground/70 font-lora">
-              Please respond on or before January 5, 2025
+              Please respond on or before January 6, 2026
             </p>
           </div>
 
@@ -335,7 +335,7 @@ export function RSVP() {
             Unless we've said otherwise, this invite is good for one (1) seat only.
           </p>
           <p className="text-[11px] sm:text-sm md:text-base text-white font-light max-w-2xl mx-auto leading-relaxed px-1 sm:px-4 mt-1.5">
-            Please respond on or before <strong>January 5, 2025</strong> to include you on the final guest list and assure you of seat/s at the reception.
+            Please respond on or before <strong>January 6, 2026</strong> to include you on the final guest list and assure you of seat/s at the reception.
           </p>
         </div>
 
