@@ -8,7 +8,7 @@ import StaggeredMenu from "./StaggeredMenu"
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#couple-video", label: "Couple Video" },
+  { href: "#couple-video", label: "Pre-Wedding Film" },
   { href: "#gallery", label: "Gallery" },
   { href: "#entourage", label: "Entourage" },
   { href: "#messages", label: "Messages" },
