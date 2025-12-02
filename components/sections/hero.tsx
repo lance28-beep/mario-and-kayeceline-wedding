@@ -144,8 +144,17 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      <div className="absolute inset-0 w-full h-full">
-        {imagesLoaded && backgroundImages.map((image, index) => (
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          // Base background so there is always a photo visible, even before JS/image preload finishes.
+          backgroundImage: `url('${backgroundImages[0]}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {backgroundImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
