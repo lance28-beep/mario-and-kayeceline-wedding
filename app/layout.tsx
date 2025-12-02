@@ -9,6 +9,44 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-serif" })
 const imperialScript = Imperial_Script({ subsets: ["latin"], weight: "400", variable: "--font-imperial-script" })
 
+const eventJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Mario & Kaye Celine Wedding",
+  startDate: "2026-02-06T13:00:00+08:00",
+  endDate: "2026-02-06T22:00:00+08:00",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  location: [
+    {
+      "@type": "Place",
+      name: "Orchid Garden Suites Manila",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "620 Pablo Ocampo Street",
+        addressLocality: "Malate, Manila",
+        addressCountry: "PH",
+      },
+    },
+  ],
+  image: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
+  description:
+    "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
+  organizer: {
+    "@type": "Person",
+    name: "Mario & Kaye Celine",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://mario-and-kayeceline-wedding.vercel.app/",
+    availability: "https://schema.org/InStock",
+    price: "0",
+    priceCurrency: "PHP",
+  },
+  eventAttendanceModeDetails: "Wedding ceremony and reception",
+  eventHashtag: "#MarioAndKayeCelineWedding",
+} as const
+
 export const metadata: Metadata = {
   title: "Mario & Kaye Celine Wedding | February 06, 2026 | Orchid Garden Suites Manila",
   description:
@@ -89,42 +127,10 @@ export const metadata: Metadata = {
     google: "your-google-site-verification",
   },
   other: {
-    "application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Event",
-      name: "Mario & Kaye Celine Wedding",
-      startDate: "2026-02-06T13:00:00+08:00",
-      endDate: "2026-02-06T22:00:00+08:00",
-      eventStatus: "https://schema.org/EventScheduled",
-      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-      location: [
-        {
-          "@type": "Place",
-          name: "Orchid Garden Suites Manila",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "620 Pablo Ocampo Street",
-            addressLocality: "Malate, Manila",
-            addressCountry: "PH",
-          },
-        },
-      ],
-      image: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
-      description:
-        "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
-      organizer: {
-        "@type": "Person",
-        name: "Mario & Kaye Celine",
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://mario-and-kayeceline-wedding.vercel.app/",
-        availability: "https://schema.org/InStock",
-        price: "0",
-        priceCurrency: "PHP",
-      },
-      eventHashtag: "#MarioAndKayeCelineWedding",
-    }),
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "mobile-web-app-capable": "yes",
+    "theme-color": "#8EA58B",
     "image": "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
   },
 }
@@ -137,6 +143,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#8EA58B" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -145,6 +154,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet" />
         <link rel="preload" as="image" href="/mobile-background/DSCF2614-min.jpg" media="(max-width: 767px)" />
         <link rel="preload" as="image" href="/desktop-background/DSCF2444-min.jpg" media="(min-width: 768px)" />
+        <script
+          type="application/ld+json"
+          // JSON-LD for rich search results (wedding event)
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+        />
       </head>
       <body className={`${inter.variable} ${greatVibes.variable} ${imperialScript.variable} font-inter antialiased text-foreground`}>
         <Navbar />
