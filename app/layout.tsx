@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-serif" })
 const imperialScript = Imperial_Script({ subsets: ["latin"], weight: "400", variable: "--font-imperial-script" })
 
+// Base URL for metadata / social sharing.
+// Defaults to Netlify as the main domain, but can be overridden per environment.
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://mario-and-kayeceline-wedding.netlify.app"
+
 const eventJsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -29,7 +34,7 @@ const eventJsonLd = {
       },
     },
   ],
-  image: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
+  image: [`${BASE_URL}/images/mario-kaye-cover.png?v=1`],
   description:
     "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
   organizer: {
@@ -38,14 +43,14 @@ const eventJsonLd = {
   },
   offers: {
     "@type": "Offer",
-    url: "https://mario-and-kayeceline-wedding.vercel.app/",
+    url: BASE_URL,
     availability: "https://schema.org/InStock",
     price: "0",
     priceCurrency: "PHP",
   },
   eventAttendanceModeDetails: "Wedding ceremony and reception",
   eventHashtag: "#MarioAndKayeCelineWedding",
-} as const
+}
 
 export const metadata: Metadata = {
   title: "Mario & Kaye Celine Wedding | February 06, 2026 | Orchid Garden Suites Manila",
@@ -64,9 +69,10 @@ export const metadata: Metadata = {
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://mario-and-kayeceline-wedding.vercel.app/"),
+  metadataBase: new URL(BASE_URL),
   alternates: {
-    canonical: "https://mario-and-kayeceline-wedding.vercel.app/",
+    // Use Netlify as the main canonical domain by default
+    canonical: BASE_URL,
   },
   icons: {
     icon: [
@@ -91,13 +97,13 @@ export const metadata: Metadata = {
     title: "Mario & Kaye Celine Wedding | February 06, 2026",
     description:
       "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
-    url: "https://mario-and-kayeceline-wedding.vercel.app/",
+    url: BASE_URL,
     siteName: "Mario and Kaye Celine Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
+        url: `${BASE_URL}/images/mario-kaye-cover.png?v=1`,
         width: 1200,
         height: 630,
         alt: "Mario & Kaye Celine Wedding Invitation - February 06, 2026",
@@ -109,7 +115,7 @@ export const metadata: Metadata = {
     title: "Mario & Kaye Celine Wedding | February 06, 2026",
     description:
       "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
-    images: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
+    images: [`${BASE_URL}/images/mario-kaye-cover.png?v=1`],
     creator: "@marioandkayeceline",
   },
   robots: {
@@ -131,7 +137,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "mobile-web-app-capable": "yes",
     "theme-color": "#8EA58B",
-    "image": "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
+    "image": `${BASE_URL}/images/mario-kaye-cover.png?v=1`,
   },
 }
 

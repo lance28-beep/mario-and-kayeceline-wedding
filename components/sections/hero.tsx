@@ -11,14 +11,7 @@ const desktopImages = [
     "/desktop-background/couple (5).jpg",
     "/desktop-background/couple (6).jpg",
     "/desktop-background/couple (7).jpg",
-    "/desktop-background/couple (8).jpg",
-    "/desktop-background/couple (9).jpg",
-    "/desktop-background/couple (10).jpg",
-    "/desktop-background/couple (11).jpg",
-    "/desktop-background/couple (12).jpg",
-    "/desktop-background/couple (1).jpg",
-    "/desktop-background/couple (14).jpg",
-    "/desktop-background/couple (15).jpg",
+
 
 ]
 
@@ -30,14 +23,6 @@ const mobileImages = [
     "/mobile-background/couple (5).jpg",
     "/mobile-background/couple (6).jpg",
     "/mobile-background/couple (7).jpg",
-    "/mobile-background/couple (8).jpg",
-    "/mobile-background/couple (9).jpg",
-    "/mobile-background/couple (10).jpg",
-    "/mobile-background/couple (11).jpg",
-    "/mobile-background/couple (12).jpg",
-    "/mobile-background/couple (1).jpg",
-    "/mobile-background/couple (14).jpg",
-    "/mobile-background/couple (15).jpg",
 ]
 
 export function Hero() {
@@ -144,31 +129,29 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          // Base background so there is always a photo visible, even before JS/image preload finishes.
-          backgroundImage: `url('${backgroundImages[0]}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              backgroundImage: `url('${image}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              willChange: "opacity",
-            }}
-          />
-        ))}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Base background so there is always a photo visible, even before JS/image preload finishes. */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('${backgroundImages[0]}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        {/* Only render the current hero image to keep initial load light.
+            This avoids forcing the browser to load all 15 full-screen photos at once. */}
+        <div
+          className="absolute inset-0 transition-opacity duration-[800ms] ease-in-out"
+          style={{
+            backgroundImage: `url('${backgroundImages[currentImageIndex]}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            willChange: "opacity",
+          }}
+        />
         {/* Enhanced gradient overlay with better depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/55 via-[#E6CFC9]/30 to-transparent z-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/35 via-[#8EA58B]/20 to-transparent z-0" />
