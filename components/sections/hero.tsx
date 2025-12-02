@@ -140,7 +140,10 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#BCCFC0]">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+    >
       <div className="absolute inset-0 w-full h-full">
         {imagesLoaded && backgroundImages.map((image, index) => (
           <div
@@ -158,8 +161,8 @@ export function Hero() {
           />
         ))}
         {/* Enhanced gradient overlay with better depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/65 via-[#E6CFC9]/35 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/55 via-[#8EA58B]/35 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/55 via-[#E6CFC9]/30 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/35 via-[#8EA58B]/20 to-transparent z-0" />
       </div>
 
       <div className="relative z-10 flex w-full items-end justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-24 pb-10 sm:pt-32 sm:pb-16 md:pb-20 lg:pb-24 min-h-screen">
