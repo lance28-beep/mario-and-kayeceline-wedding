@@ -1,6 +1,7 @@
 "use client"
 
 import type { JSX } from "react"
+import Image from "next/image"
 import { Section } from "@/components/section"
 
 interface TimelineEvent {
@@ -13,42 +14,42 @@ const timelineEvents: TimelineEvent[] = [
   {
     time: "12:30 PM",
     title: "Call Time",
-    Icon: ClocheIcon,
+    Icon: ClockImageIcon,
   },
   {
     time: "1:00 PM",
     title: "Processional",
-    Icon: RingsIcon,
+    Icon: CameraImageIcon,
   },
   {
     time: "1:35 PM",
     title: "Worship",
-    Icon: MicrophoneIcon,
+    Icon: WorshipImageIcon,
   },
   {
     time: "1:45 PM",
     title: "Vows & I Do's",
-    Icon: DanceIcon,
+    Icon: RingImageIcon,
   },
   {
     time: "3:30 PM",
     title: "Sequence Pictorial",
-    Icon: ClocheIcon,
+    Icon: CameraImageIcon,
   },
   {
     time: "4:00 PM",
     title: "Cocktails & Social Hour",
-    Icon: DinnerIcon,
+    Icon: GlassImageIcon,
   },
   {
     time: "5:00 PM",
     title: "Celebration Dinner",
-    Icon: DinnerIcon,
+    Icon: DinnerImageIcon,
   },
   {
     time: "6:00 PM",
     title: "Send-off",
-    Icon: FireworksIcon,
+    Icon: CarImageIcon,
   },
 ]
 
@@ -200,9 +201,114 @@ function IconBadge({ Icon }: { Icon: () => JSX.Element }) {
       <div className="absolute inset-0 rounded-full bg-[#324D3E]/20 blur-md group-hover:bg-[#324D3E]/30 transition-all duration-300 scale-110" />
       
       {/* Main badge */}
-      <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-2 border-[#324D3E] bg-white flex items-center justify-center shadow-[0_8px_24px_rgba(50,77,62,0.25)] group-hover:shadow-[0_12px_32px_rgba(50,77,62,0.35)] transition-all duration-300 group-hover:scale-110">
+      <div className="relative w-16 h-16 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-24 lg:h-24 rounded-full border-2 border-[#324D3E] bg-white flex items-center justify-center shadow-[0_8px_24px_rgba(50,77,62,0.25)] group-hover:shadow-[0_12px_32px_rgba(50,77,62,0.35)] transition-all duration-300 group-hover:scale-110">
         <Icon />
       </div>
+    </div>
+  )
+}
+
+function ClockImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/clock icon.png"
+        alt="Call time clock"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function CameraImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/camera icon.png"
+        alt="Processional camera"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function GlassImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/glass icon.png"
+        alt="Worship glass"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function RingImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/Ringicon.png"
+        alt="Vows and rings"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function WorshipImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/worship.png"
+        alt="Worship"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function DinnerImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/dinner.png"
+        alt="Celebration dinner"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
+    </div>
+  )
+}
+
+function CarImageIcon() {
+  return (
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src="/imagesicons/car icon.png"
+        alt="Send-off car"
+        fill
+        className="object-cover scale-110"
+        sizes="48px"
+        priority={false}
+      />
     </div>
   )
 }
