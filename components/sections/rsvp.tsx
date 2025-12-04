@@ -31,15 +31,19 @@ function RSVPForm({ onSuccess }: RSVPFormProps) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const googleFormData = new FormData()
-    googleFormData.append("entry.2031409661", attendance)
-    googleFormData.append("entry.1697476721", names) // You'll need to provide the correct entry ID for names field
-    googleFormData.append("entry.534061937", contactNumber)
-    googleFormData.append("entry.984926065", comments)
-
     try {
+      // Mirror the behaviour of the Message section:
+      // submit directly to the Google Form `formResponse` endpoint using fetch
+      // with `no-cors`. The response is opaque, but the submission reaches the
+      // linked Google Sheet just like the messages form.
+      const googleFormData = new FormData()
+      googleFormData.append("entry.812523124", names)          // Full Name
+      googleFormData.append("entry.1089847371", attendance)    // Can You Attend?
+      googleFormData.append("entry.534061937", contactNumber)  // Contact Number
+      googleFormData.append("entry.984926065", comments)       // Comments / Questions
+
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSdgmsoQrLa1MeIg7oDLTNlhbGbZzQr_RyhT18CyA_RmYFRoqw/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSdvlWADgjUsTrYjIvpSFD9h12E3pypT8WVY0Ri-XugbpYjKwg/formResponse",
         {
           method: "POST",
           mode: "no-cors",
