@@ -34,7 +34,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     time: "3:30 PM",
     title: "Sequence Pictorial",
-    Icon: CameraImageIcon,
+    Icon: SequencePictorialImageIcon,
   },
   {
     time: "4:00 PM",
@@ -210,105 +210,136 @@ function IconBadge({ Icon }: { Icon: () => JSX.Element }) {
 
 function ClockImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/clock icon.png"
-        alt="Call time clock"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/calltime.jpg"
+          alt="Call time clock"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function CameraImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/camera icon.png"
-        alt="Processional camera"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/Processional.jpg"
+          alt="Processional camera"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function GlassImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/glass icon.png"
-        alt="Worship glass"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/cocktailsand socialhour.jpg"
+          alt="Cocktails and social hour"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function RingImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/Ringicon.png"
-        alt="Vows and rings"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/Vows.png"
+          alt="Vows and rings"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function WorshipImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/worship.png"
-        alt="Worship"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/Worship.png"
+          alt="Worship"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function DinnerImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/dinner.png"
-        alt="Celebration dinner"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/celebration dinner.jpg"
+          alt="Celebration dinner"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
 
 function CarImageIcon() {
   return (
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image
-        src="/imagesicons/car icon.png"
-        alt="Send-off car"
-        fill
-        className="object-cover scale-110"
-        sizes="48px"
-        priority={false}
-      />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/sendoff.jpg"
+          alt="Send-off car"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
+    </div>
+  )
+}
+
+function SequencePictorialImageIcon() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
+        <Image
+          src="/weddingTimeline/sequencepictorial.jpg"
+          alt="Sequence pictorial"
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
+      </div>
     </div>
   )
 }
