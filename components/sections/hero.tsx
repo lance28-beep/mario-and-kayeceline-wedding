@@ -3,32 +3,36 @@
 import { useEffect, useState, useMemo } from "react"
 import { Heart, Sparkles, Download } from "lucide-react"
 
+const DEFAULT_DESKTOP = "/desktop-background/couple (13).jpg"
+const DEFAULT_MOBILE = "/mobile-background/couple (13).jpg"
+
 const desktopImages = [
-    "/desktop-background/couple (13).jpg",
-    "/desktop-background/couple (2).jpg",
-    "/desktop-background/couple (3).jpg",
-    "/desktop-background/couple (4).jpg",
-    "/desktop-background/couple (5).jpg",
-    "/desktop-background/couple (6).jpg",
-    "/desktop-background/couple (7).jpg",
-
-
+  DEFAULT_DESKTOP,
+  "/desktop-background/couple (2).jpg",
+  "/desktop-background/couple (3).jpg",
+  "/desktop-background/couple (4).jpg",
+  "/desktop-background/couple (5).jpg",
+  "/desktop-background/couple (6).jpg",
+  "/desktop-background/couple (7).jpg",
 ]
 
 const mobileImages = [
-    "/mobile-background/couple (2).jpg",
-    "/mobile-background/couple (13).jpg",
-    "/mobile-background/couple (3).jpg",
-    "/mobile-background/couple (4).jpg",
-    "/mobile-background/couple (5).jpg",
-    "/mobile-background/couple (6).jpg",
-    "/mobile-background/couple (7).jpg",
+  DEFAULT_MOBILE,
+  "/mobile-background/couple (2).jpg",
+  "/mobile-background/couple (3).jpg",
+  "/mobile-background/couple (4).jpg",
+  "/mobile-background/couple (5).jpg",
+  "/mobile-background/couple (6).jpg",
+  "/mobile-background/couple (7).jpg",
 ]
 
 export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imagesLoaded, setImagesLoaded] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false
+    return window.innerWidth < 768
+  })
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -125,10 +129,19 @@ export function Hero() {
     return () => clearInterval(timer)
   }, [])
 
+  const initialBackground = isMobile ? DEFAULT_MOBILE : DEFAULT_DESKTOP
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
+      style={{
+        // Paint a stable first frame with the desired default image to avoid color flicker
+        backgroundImage: `url('${initialBackground}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="absolute inset-0 w-full h-full">
         {/* Render all images with opacity transitions - prevents glitches */}
@@ -159,9 +172,17 @@ export function Hero() {
             }}
           />
         )}
-        {/* Enhanced gradient overlay with better depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/55 via-[#E6CFC9]/30 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/35 via-[#8EA58B]/20 to-transparent z-0" />
+        {/* Enhanced gradient overlay with smooth fade-in to prevent tinted flash */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-t from-[#A1857A]/55 via-[#E6CFC9]/30 to-transparent z-0 transition-opacity duration-700 ease-out ${
+            imagesLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <div
+          className={`absolute inset-0 bg-gradient-to-b from-[#8EA58B]/35 via-[#8EA58B]/20 to-transparent z-0 transition-opacity duration-700 ease-out ${
+            imagesLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
       </div>
 
       <div className="relative z-10 flex w-full items-end justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-24 pb-10 sm:pt-32 sm:pb-16 md:pb-20 lg:pb-24 min-h-screen">
