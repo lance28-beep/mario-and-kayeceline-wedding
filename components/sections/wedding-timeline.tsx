@@ -281,7 +281,7 @@ function WorshipImageIcon() {
     <div className="relative w-full h-full flex items-center justify-center">
       <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden">
         <Image
-          src="/weddingTimeline/Worship.png"
+          src="/weddingTimeline/Worship2.jpg"
           alt="Worship"
           fill
           className="object-cover"

@@ -344,7 +344,7 @@ export function Messages() {
           </h2>
 
           <p className="text-xs sm:text-sm md:text-base text-white font-light max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
-            Leave a short note for Julaine and Cristopher. Every wish and memory helps build our keepsake wall.
+            Leave a short note for Mario & Kaye Celine. Every wish and memory helps build our keepsake wall.
           </p>
         </div>
 
