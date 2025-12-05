@@ -7,18 +7,18 @@ import { Smartphone, Banknote } from "lucide-react"
 
 const paymentMethods = [
   {
-    id: "gcash",
-    label: "GCash",
-    description: "Instant transfer via GCash",
-    accent: "from-[#BCCFC0] to-[#8EA58B]",
-    Icon: Smartphone,
-  },
-  {
     id: "bpi",
     label: "BPI",
     description: "Direct bank transfer",
     accent: "from-[#E6CFC9] to-[#BCCFC0]",
     Icon: Banknote,
+  },
+  {
+    id: "gcash",
+    label: "GCash",
+    description: "Instant transfer via GCash",
+    accent: "from-[#BCCFC0] to-[#8EA58B]",
+    Icon: Smartphone,
   },
 ] as const
 
@@ -30,7 +30,7 @@ const qrImageByMethod: Record<PaymentId, string> = {
 }
 
 export function Registry() {
-  const [activeMethod, setActiveMethod] = useState<PaymentId>("gcash")
+  const [activeMethod, setActiveMethod] = useState<PaymentId>("bpi")
 
   const activeDetails = paymentMethods.find(method => method.id === activeMethod)
 
