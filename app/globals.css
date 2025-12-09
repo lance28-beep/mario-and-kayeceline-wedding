@@ -87,6 +87,7 @@
   /* Updated serif font to Great Vibes */
   --font-serif: "Great Vibes", "Great Vibes Fallback";
   --font-imperial-script: "Imperial Script", cursive;
+  --font-cinzel: "Cinzel", serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -142,6 +143,13 @@ html {
 
 /* Imperial Script font utility class */
 .imperial-script-regular {
+  font-family: var(--font-imperial-script), cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Script font utility class (alias for imperial script) */
+.font-script {
   font-family: var(--font-imperial-script), cursive;
   font-weight: 400;
   font-style: normal;
@@ -231,6 +239,19 @@ html {
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
 }
 
 /* Enhanced shadow for cards */
